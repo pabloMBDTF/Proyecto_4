@@ -13,10 +13,10 @@ import model.Usuario;
  * @author pablo
  */
 public interface InterfaceUsuarioDao {
-    public void crearUsuario(String nombre, String id, boolean esProveedor);
+    public void crearUsuario(String nombre, int id, boolean esProveedor);
     public void eliminarUsuario(String id, boolean proveedor);
     public void actualizarPersona(String nombre,  Usuario usu );
-    public ArrayList<Usuario> getUsuarios(String tipo);
-    public Usuario getPersona(String nombre, boolean esProveedor);
+    //public ArrayList<Usuario> getUsuarios(String tipo);
+    //public Usuario getPersona(String nombre, boolean esProveedor);
     
 }

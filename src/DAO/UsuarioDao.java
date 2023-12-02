@@ -5,6 +5,7 @@
 package DAO;
 
 import java.util.ArrayList;
+import model.Supermercado;
 import model.Usuario;
 
 /**
@@ -12,9 +13,13 @@ import model.Usuario;
  * @author pablo
  */
 public class UsuarioDao implements InterfaceUsuarioDao{
+    
+    private Supermercado tienda = new Supermercado(); 
 
     @Override
-    public void crearUsuario(String nombre, String id, boolean esProveedor) {
+    public void crearUsuario(String nombre, int id, boolean esProveedor) {
+        tienda.getUsuarios().add(new Usuario(nombre,id, esProveedor));
+        System.out.println("usuario agregado");
         
     }
 
@@ -28,14 +33,24 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         
     }
 
-    @Override
-    public ArrayList<Usuario> getUsuarios(String tipo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //@Override
+    //public ArrayList<Usuario> getUsuarios(String tipo) {
+    //    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //}
+
+    //@Override
+    //public Usuario getPersona(String nombre, boolean esProveedor) {
+    //    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //}
+
+    public Supermercado getTienda() {
+        return tienda;
     }
 
-    @Override
-    public Usuario getPersona(String nombre, boolean esProveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setTienda(Supermercado tienda) {
+        this.tienda = tienda;
     }
+    
+    
     
 }

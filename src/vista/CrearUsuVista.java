@@ -6,6 +6,7 @@ package vista;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -14,12 +15,12 @@ import javax.swing.JTextField;
  *
  * @author pablo
  */
-public class LoginVista extends javax.swing.JFrame {
+public class CrearUsuVista extends javax.swing.JFrame {
 
     /**
-     * Creates new form LoginVista
+     * Creates new form CrearUsuVista
      */
-    public LoginVista() {
+    public CrearUsuVista() {
         initComponents();
     }
 
@@ -34,33 +35,35 @@ public class LoginVista extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnCrearPerfil = new javax.swing.JButton();
-        btnIngresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nombreJField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         identificadorJField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jCheckBoxProveedor = new javax.swing.JCheckBox();
+        btnCrear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("titulo");
+        jLabel1.setText("nombre");
 
-        btnCrearPerfil.setText("Crear perfil");
-        btnCrearPerfil.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setText("identidficador");
+
+        nombreJField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearPerfilActionPerformed(evt);
+                nombreJFieldActionPerformed(evt);
             }
         });
 
-        btnIngresar.setText("Ingresar");
+        jLabel3.setText("activa este check para ser un proveedor");
 
-        jLabel2.setText("nombre:");
+        jCheckBoxProveedor.setText("Proveedor");
+        jCheckBoxProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxProveedorActionPerformed(evt);
+            }
+        });
 
-        nombreJField.setText("jTextField1");
-
-        jLabel3.setText("identificador:");
-
-        identificadorJField.setText("jTextField2");
+        btnCrear.setText("jButton1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -69,50 +72,45 @@ public class LoginVista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(nombreJField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(73, 73, 73)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel3)))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(identificadorJField, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(nombreJField)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jCheckBoxProveedor))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                        .addComponent(btnCrearPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(identificadorJField, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(268, 268, 268)
+                        .addComponent(btnCrear)))
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1)
+                .addGap(97, 97, 97)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(nombreJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(79, 79, 79)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(nombreJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(identificadorJField, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112)
-                        .addComponent(jLabel3)))
-                .addGap(76, 76, 76)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(identificadorJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCrearPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+                    .addComponent(jCheckBoxProveedor)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(btnCrear)
+                .addGap(39, 39, 39))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,15 +121,19 @@ public class LoginVista extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCrearPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPerfilActionPerformed
+    private void jCheckBoxProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCrearPerfilActionPerformed
+    }//GEN-LAST:event_jCheckBoxProveedorActionPerformed
+
+    private void nombreJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreJFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,28 +152,28 @@ public class LoginVista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearUsuVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearUsuVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearUsuVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearUsuVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginVista().setVisible(true);
+                new CrearUsuVista().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCrearPerfil;
-    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnCrear;
     private javax.swing.JTextField identificadorJField;
+    private javax.swing.JCheckBox jCheckBoxProveedor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -179,25 +181,17 @@ public class LoginVista extends javax.swing.JFrame {
     private javax.swing.JTextField nombreJField;
     // End of variables declaration//GEN-END:variables
 
-    public void addBtnCrearPerfilListener(ActionListener listener) {
-        btnCrearPerfil.addActionListener(listener);
+    public void addBtnCrearListener(ActionListener listener) {
+        btnCrear.addActionListener(listener);
     }
     
     
-    public JButton getBtnCrearPerfil() {
-        return btnCrearPerfil;
+    public JButton getBtnCrear() {
+        return btnCrear;
     }
 
-    public void setBtnCrearPerfil(JButton btnCrearPerfil) {
-        this.btnCrearPerfil = btnCrearPerfil;
-    }
-
-    public JButton getBtnIngresar() {
-        return btnIngresar;
-    }
-
-    public void setBtnIngresar(JButton btnIngresar) {
-        this.btnIngresar = btnIngresar;
+    public void setBtnCrear(JButton btnCrear) {
+        this.btnCrear = btnCrear;
     }
 
     public JTextField getIdentificadorJField() {
@@ -206,6 +200,14 @@ public class LoginVista extends javax.swing.JFrame {
 
     public void setIdentificadorJField(JTextField identificadorJField) {
         this.identificadorJField = identificadorJField;
+    }
+
+    public JCheckBox getjCheckBoxProveedor() {
+        return jCheckBoxProveedor;
+    }
+
+    public void setjCheckBoxProveedor(JCheckBox jCheckBoxProveedor) {
+        this.jCheckBoxProveedor = jCheckBoxProveedor;
     }
 
     public JLabel getjLabel1() {
@@ -247,8 +249,6 @@ public class LoginVista extends javax.swing.JFrame {
     public void setNombreJField(JTextField nombreJField) {
         this.nombreJField = nombreJField;
     }
-
     
-
 
 }

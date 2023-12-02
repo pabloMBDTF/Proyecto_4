@@ -4,6 +4,10 @@
  */
 package proyecto_4;
 
+import DAO.UsuarioDao;
+import controlador.controladorLogin;
+import vista.LoginVista;
+
 /**
  *
  * @author pablo
@@ -15,6 +19,14 @@ public class Proyecto_4 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        LoginVista vista = new LoginVista();
+        vista.setVisible(true);
+        
+        UsuarioDao dao = new UsuarioDao();
+        
+        controladorLogin controlador = new controladorLogin(dao, vista);
     }
     
 }
