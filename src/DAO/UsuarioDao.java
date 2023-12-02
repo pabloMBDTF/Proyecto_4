@@ -15,9 +15,10 @@ import model.Usuario;
 public class UsuarioDao implements InterfaceUsuarioDao{
     
     private Supermercado tienda = new Supermercado(); 
+    private Usuario usuarioActual;
 
     @Override
-    public void crearUsuario(String nombre, int id, boolean esProveedor) {
+    public void crearUsuario(String nombre, String id, boolean esProveedor) {
         tienda.getUsuarios().add(new Usuario(nombre,id, esProveedor));
         System.out.println("usuario agregado");
         
@@ -50,6 +51,16 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void setTienda(Supermercado tienda) {
         this.tienda = tienda;
     }
+
+    public Usuario getUsuario() {
+        return usuarioActual;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuarioActual = usuario;
+    }
+    
+    
     
     
     

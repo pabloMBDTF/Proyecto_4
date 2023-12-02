@@ -14,12 +14,12 @@ import java.util.ArrayList;
  */
 public class Usuario {
     private String nombre;
-    private int identificador;
+    private String identificador;
     private ArrayList<String> productos;
     private ArrayList<Integer> cantidades;
     private boolean esProveedor;
 
-    public Usuario(String nombre, int identificador, boolean esProveedor) {
+    public Usuario(String nombre, String identificador, boolean esProveedor) {
         this.nombre = nombre;
         this.identificador = identificador;
         this.productos = new ArrayList<String>();
@@ -35,11 +35,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public int getIdentificador() {
+    public String getIdentificador() {
         return identificador;
     }
 
-    public void setIdentificador(int identificador) {
+    public void setIdentificador(String identificador) {
         this.identificador = identificador;
     }
 

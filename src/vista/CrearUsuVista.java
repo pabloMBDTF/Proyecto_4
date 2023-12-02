@@ -41,12 +41,13 @@ public class CrearUsuVista extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jCheckBoxProveedor = new javax.swing.JCheckBox();
         btnCrear = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("nombre");
+        jLabel1.setText("nombre:");
 
-        jLabel2.setText("identidficador");
+        jLabel2.setText("identidficador:");
 
         nombreJField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +55,7 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("activa este check para ser un proveedor");
+        jLabel3.setText("Activa este check para ser un proveedor");
 
         jCheckBoxProveedor.setText("Proveedor");
         jCheckBoxProveedor.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +64,19 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
-        btnCrear.setText("jButton1");
+        btnCrear.setText("Crear");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
+
+        btnVolver.setText("volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -72,26 +85,27 @@ public class CrearUsuVista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel3)))
-                        .addGap(34, 34, 34)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(identificadorJField, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                            .addComponent(nombreJField)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jCheckBoxProveedor))))
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(268, 268, 268)
-                        .addComponent(btnCrear)))
-                .addContainerGap(210, Short.MAX_VALUE))
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel3)))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(identificadorJField, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .addComponent(nombreJField)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jCheckBoxProveedor)))
+                .addContainerGap(208, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(268, 268, 268)
+                .addComponent(btnCrear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVolver)
+                .addGap(60, 60, 60))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +123,9 @@ public class CrearUsuVista extends javax.swing.JFrame {
                     .addComponent(jCheckBoxProveedor)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(btnCrear)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCrear)
+                    .addComponent(btnVolver))
                 .addGap(39, 39, 39))
         );
 
@@ -134,6 +150,14 @@ public class CrearUsuVista extends javax.swing.JFrame {
     private void nombreJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreJFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreJFieldActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,6 +196,7 @@ public class CrearUsuVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JTextField identificadorJField;
     private javax.swing.JCheckBox jCheckBoxProveedor;
     private javax.swing.JLabel jLabel1;
@@ -185,6 +210,17 @@ public class CrearUsuVista extends javax.swing.JFrame {
         btnCrear.addActionListener(listener);
     }
     
+    public void addBtnVolverListener(ActionListener listener) {
+        btnVolver.addActionListener(listener);
+    }
+
+    public JButton getBtnVolver() {
+        return btnVolver;
+    }
+
+    public void setBtnVolver(JButton btnVolver) {
+        this.btnVolver = btnVolver;
+    }    
     
     public JButton getBtnCrear() {
         return btnCrear;
