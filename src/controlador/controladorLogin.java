@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import model.Usuario;
 import vista.CrearUsuVista;
 import vista.LoginVista;
+import vista.PrincipalProvVista;
 
 /**
  *
@@ -60,6 +61,16 @@ public class controladorLogin {
                         for (Usuario usu : usuarios) {
                             if (usu.getIdentificador().equals(identificador) && usu.getNombre().equals(nombre)){
                                 System.out.println("si");
+                                if (usu.isEsProveedor() == true){
+                                    modelo.setUsuario(usu);
+                                    PrincipalProvVista ventana = new PrincipalProvVista();
+                                    ventana.setVisible(true);
+                                    vista.dispose();
+                                    controladorProveedor cont = new controladorProveedor(modelo, ventana);
+                                    
+                                    
+                                    
+                                }
                             }else{
                                 JOptionPane.showMessageDialog(null, "Nombre o identificador incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                             }

@@ -16,6 +16,8 @@ public interface InterfaceUsuarioDao {
     public void crearUsuario(String nombre, String id, boolean esProveedor);
     public void eliminarUsuario(String id, boolean proveedor);
     public void actualizarPersona(String nombre,  Usuario usu );
+    public void crearProducto(String nombre, String idProducto, String idProveedor, int cantidad, int precio );
+    
     //public ArrayList<Usuario> getUsuarios(String tipo);
     //public Usuario getPersona(String nombre, boolean esProveedor);
     

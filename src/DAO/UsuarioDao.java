@@ -5,6 +5,7 @@
 package DAO;
 
 import java.util.ArrayList;
+import model.Producto;
 import model.Supermercado;
 import model.Usuario;
 
@@ -16,6 +17,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     
     private Supermercado tienda = new Supermercado(); 
     private Usuario usuarioActual;
+    
 
     @Override
     public void crearUsuario(String nombre, String id, boolean esProveedor) {
@@ -59,6 +61,16 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void setUsuario(Usuario usuario) {
         this.usuarioActual = usuario;
     }
+
+    @Override
+    public void crearProducto(String nombre, String idProducto, String idProveedor, int cantidad, int precio) {
+        Producto producto = new Producto(nombre, idProducto, idProveedor, cantidad, precio);
+        tienda.getProductos().add(producto);
+        System.out.println("producto agregado.");
+        
+    }
+
+    
     
     
     
