@@ -98,7 +98,11 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         for(Producto producto : tienda.getProductos()){
             if(producto.getIdProducto().equals(idProdducto)){
                 UsuProveedor prov =(UsuProveedor) getProvedor(idVendedor);
-                producto.restarCantidad(cantidad);
+                //producto.restarCantidad(cantidad);
+                int cantidadActual = producto.getCantidad();
+                int cantidadCompra = cantidadActual-cantidad;
+                producto.setCantidad(cantidadCompra);
+                System.out.println(producto.getCantidad());
                 prov.getNomProductosProveedor().add(producto.getNombre());
                 prov.getCantidadProductosProveedor().add(producto.getCantidad());
                 prov.getProductosProveedor().add(usuarioActual.getNombre());

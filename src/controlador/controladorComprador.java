@@ -5,7 +5,11 @@
 package controlador;
 
 import DAO.UsuarioDao;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.Producto;
+import vista.LoginVista;
 import vista.PrincipalUsuVista;
 
 /**
@@ -22,6 +26,47 @@ public class controladorComprador {
         this.modelo = modelo;
         agregarRegistrosLista();
         vista.getLblNombre().setText(modelo.getUsuario().getNombre());
+        vista.addBtnComprarListener(new btnComprarListener());
+        vista.addBtnSalirListener(new btnSalirListenner());
+    }
+    
+    class btnComprarListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int filaSeleccionada = vista.getjTableProductos().getSelectedRow();
+
+            if (filaSeleccionada != -1) {
+                String idProducto = (String) vista.getModelo().getValueAt(filaSeleccionada, 0);
+                int cantidad = Integer.parseInt(vista.getModelo().getValueAt(filaSeleccionada, 3).toString());
+                String idComprador = modelo.getUsuario().getIdentificador();
+                System.out.println(idProducto );
+                System.out.println(cantidad );
+                System.out.println(idComprador );
+
+                modelo.realizarCompra(idProducto, cantidad, idComprador);
+                agregarRegistrosLista();
+            } else {
+                // No hay fila seleccionada
+                JOptionPane.showMessageDialog(null, "No hay fila seleccionada", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            }
+            
+            
+        }
+    
+    }
+    
+    
+    class btnSalirListenner implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            LoginVista ventana = new LoginVista();
+            ventana.setVisible(true);
+            vista.dispose();
+            controladorLogin cont = new controladorLogin(modelo, ventana);
+        }
+    
     }
     
     
