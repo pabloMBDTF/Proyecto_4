@@ -14,6 +14,7 @@ import model.Usuario;
 import vista.CrearUsuVista;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
+import vista.PrincipalUsuVista;
 
 /**
  *
@@ -66,10 +67,13 @@ public class controladorLogin {
                                     PrincipalProvVista ventana = new PrincipalProvVista();
                                     ventana.setVisible(true);
                                     vista.dispose();
-                                    controladorProveedor cont = new controladorProveedor(modelo, ventana);
-                                    
-                                    
-                                    
+                                    controladorProveedor cont = new controladorProveedor(modelo, ventana);                                                                                                          
+                                }else{
+                                    modelo.setUsuario(usu);
+                                    PrincipalUsuVista ventana = new PrincipalUsuVista();
+                                    ventana.setVisible(true);
+                                    vista.dispose();
+                                    controladorComprador cont = new controladorComprador(modelo, ventana);             
                                 }
                             }else{
                                 JOptionPane.showMessageDialog(null, "Nombre o identificador incorrectos", "Error", JOptionPane.ERROR_MESSAGE);

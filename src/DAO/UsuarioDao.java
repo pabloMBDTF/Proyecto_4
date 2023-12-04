@@ -5,8 +5,11 @@
 package DAO;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import model.Producto;
 import model.Supermercado;
+import model.UsuComprador;
+import model.UsuProveedor;
 import model.Usuario;
 
 /**
@@ -21,8 +24,13 @@ public class UsuarioDao implements InterfaceUsuarioDao{
 
     @Override
     public void crearUsuario(String nombre, String id, boolean esProveedor) {
-        tienda.getUsuarios().add(new Usuario(nombre,id, esProveedor));
-        System.out.println("usuario agregado");
+        if (esProveedor == true){
+            tienda.getUsuarios().add(new UsuProveedor(nombre,id, esProveedor));
+            System.out.println("usuario agregado");
+        }else{
+            tienda.getUsuarios().add(new UsuComprador(nombre,id, esProveedor));
+            System.out.println("usuario agregado");
+        }
         
     }
 
@@ -67,6 +75,57 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         Producto producto = new Producto(nombre, idProducto, idProveedor, cantidad, precio);
         tienda.getProductos().add(producto);
         System.out.println("producto agregado.");
+        
+    }
+
+    @Override
+    public Usuario getProvedor(String id) {
+        if (id == null) {
+            throw new IllegalArgumentException("El identificador no puede ser nulo");
+        }
+
+        for (Usuario usuario : tienda.getUsuarios()) {
+            if (id.equalsIgnoreCase(usuario.getIdentificador())) {
+                return usuario;
+            }
+        }
+
+        throw new NoSuchElementException("Proveedor no encontrado con el identificador: " + id);
+    }
+
+    @Override
+    public void realizarCompra(String idProdducto, int cantidad, String idVendedor) {
+        for(Producto producto : tienda.getProductos()){
+            if(producto.getIdProducto().equals(idProdducto)){
+                UsuProveedor prov =(UsuProveedor) getProvedor(idVendedor);
+                producto.restarCantidad(cantidad);
+                prov.getNomProductosProveedor().add(producto.getNombre());
+                prov.getCantidadProductosProveedor().add(producto.getCantidad());
+                prov.getProductosProveedor().add(usuarioActual.getNombre());
+                // para el comprador 
+                usuarioActual.getNombreProductosComprador().add(producto.getNombre());
+                usuarioActual.getCantidadProductosComprador().add(producto.getCantidad());
+                
+                
+                
+            
+            }
+        }
+    }
+
+    @Override
+    public Producto getProducto(String idproducto) {
+        if (idproducto == null) {
+            throw new IllegalArgumentException("El identificador no puede ser nulo");
+        }
+
+        for (Producto producto : tienda.getProductos()) {
+            if (idproducto.equalsIgnoreCase(producto.getIdProducto())) {
+                return producto;
+            }
+        }
+
+        throw new NoSuchElementException("Proveedor no encontrado con el identificador: " + idproducto);
         
     }
 

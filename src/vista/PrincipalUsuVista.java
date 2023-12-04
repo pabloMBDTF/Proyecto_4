@@ -4,6 +4,14 @@
  */
 package vista;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author pablo
@@ -27,18 +35,70 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableProductos = new javax.swing.JTable();
+        lblNombre = new javax.swing.JLabel();
+        btnComprar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        btnEditarPerfil = new javax.swing.JButton();
+        btnHistorial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        modelo = new DefaultTableModel();
+        modelo.addColumn("Id");
+        modelo.addColumn("Id Proveedor");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Cantidad");
+        modelo.addColumn("Precio");
+        jTableProductos.setModel(modelo);
+        jScrollPane1.setViewportView(jTableProductos);
+
+        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNombre.setText("Nombre");
+
+        btnComprar.setText("Comprar");
+
+        btnSalir.setText("Salir");
+
+        btnEditarPerfil.setText("Edit Perfil");
+
+        btnHistorial.setText("Historial");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnEditarPerfil)
+                        .addGap(54, 54, 54)
+                        .addComponent(btnHistorial, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnComprar))
+                .addGap(46, 46, 46)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarPerfil)
+                    .addComponent(btnHistorial)
+                    .addComponent(btnSalir))
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -91,6 +151,99 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnComprar;
+    private javax.swing.JButton btnEditarPerfil;
+    private javax.swing.JButton btnHistorial;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableProductos;
+    private javax.swing.JLabel lblNombre;
     // End of variables declaration//GEN-END:variables
+    private DefaultTableModel modelo;
+    
+    public void addBtnComprarListener(ActionListener listener) {
+        btnComprar.addActionListener(listener);
+    }
+    
+    
+    public void addBtnSalirListener(ActionListener listener) {
+        btnSalir.addActionListener(listener);
+    }
+
+    public JButton getBtnComprar() {
+        return btnComprar;
+    }
+
+    public void setBtnComprar(JButton btnComprar) {
+        this.btnComprar = btnComprar;
+    }
+
+    public JButton getBtnEditarPerfil() {
+        return btnEditarPerfil;
+    }
+
+    public void setBtnEditarPerfil(JButton btnEditarPerfil) {
+        this.btnEditarPerfil = btnEditarPerfil;
+    }
+
+    public JButton getBtnHistorial() {
+        return btnHistorial;
+    }
+
+    public void setBtnHistorial(JButton btnHistorial) {
+        this.btnHistorial = btnHistorial;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTable getjTableProductos() {
+        return jTableProductos;
+    }
+
+    public void setjTableProductos(JTable jTableProductos) {
+        this.jTableProductos = jTableProductos;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
+    }
+
+    public DefaultTableModel getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(DefaultTableModel modelo) {
+        this.modelo = modelo;
+    }
+
+    
+    
+    
 }

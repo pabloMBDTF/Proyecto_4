@@ -71,6 +71,10 @@ public class Producto {
         this.precio = precio;
     }
     
+    public void restarCantidad(int cant){
+        cantidad -= cant;
+    }
+    
     
     
     
