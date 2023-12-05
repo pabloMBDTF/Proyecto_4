@@ -39,7 +39,7 @@ public class controladorComprador {
             if (filaSeleccionada != -1) {
                 String idProducto = (String) vista.getModelo().getValueAt(filaSeleccionada, 0);
                 int cantidad = Integer.parseInt(vista.getModelo().getValueAt(filaSeleccionada, 3).toString());
-                String idComprador = modelo.getUsuario().getIdentificador();
+                String idComprador = (String) vista.getModelo().getValueAt(filaSeleccionada, 1);
                 System.out.println(idProducto );
                 System.out.println(cantidad );
                 System.out.println(idComprador );
