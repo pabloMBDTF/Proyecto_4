@@ -9,8 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.Producto;
+import vista.CompradorEstadisticasVista;
 import vista.LoginVista;
 import vista.PrincipalUsuVista;
+import vista.ProveedorStadisticasVista;
 
 /**
  *
@@ -28,6 +30,7 @@ public class controladorComprador {
         vista.getLblNombre().setText(modelo.getUsuario().getNombre());
         vista.addBtnComprarListener(new btnComprarListener());
         vista.addBtnSalirListener(new btnSalirListenner());
+        vista.addBtnHistorialListener(new btnHistorialListener());
     }
     
     class btnComprarListener implements ActionListener{
@@ -56,6 +59,17 @@ public class controladorComprador {
     
     }
     
+    class btnHistorialListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            CompradorEstadisticasVista ventana = new CompradorEstadisticasVista();
+            ventana.setVisible(true);
+            vista.dispose();
+            controladorStatsComprador cont = new controladorStatsComprador(modelo, ventana);
+        }
+    
+    }
     
     class btnSalirListenner implements ActionListener{
 

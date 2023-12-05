@@ -47,46 +47,50 @@ public class controladorLogin {
     class btnIngresarListener implements ActionListener{
 
         @Override
-        public void actionPerformed(ActionEvent e) {
-            if (modelo != null) {
-                ArrayList<Usuario> usuarios = modelo.getTienda().getUsuarios();
+public void actionPerformed(ActionEvent e) {
+    if (modelo != null) {
+        ArrayList<Usuario> usuarios = modelo.getTienda().getUsuarios();
 
-                
-                if (!usuarios.isEmpty()) {
+        if (!usuarios.isEmpty()) {
+            String nombre = vista.getNombreJField().getText();
+            String identificador = vista.getIdentificadorJField().getText();
 
-                    
-                    String nombre = vista.getNombreJField().getText();
-                    String identificador = vista.getIdentificadorJField().getText();
+            if (!nombre.isEmpty() && !identificador.isEmpty()) {
+                boolean usuarioEncontrado = false;
 
-                    if (!nombre.isEmpty() && !identificador.isEmpty()) {
-                        for (Usuario usu : usuarios) {
-                            if (usu.getIdentificador().equals(identificador) && usu.getNombre().equals(nombre)){
-                                System.out.println("si");
-                                if (usu.isEsProveedor() == true){
-                                    modelo.setUsuario(usu);
-                                    PrincipalProvVista ventana = new PrincipalProvVista();
-                                    ventana.setVisible(true);
-                                    vista.dispose();
-                                    controladorProveedor cont = new controladorProveedor(modelo, ventana);                                                                                                          
-                                }else{
-                                    modelo.setUsuario(usu);
-                                    PrincipalUsuVista ventana = new PrincipalUsuVista();
-                                    ventana.setVisible(true);
-                                    vista.dispose();
-                                    controladorComprador cont = new controladorComprador(modelo, ventana);             
-                                }
-                            }else{
-                                JOptionPane.showMessageDialog(null, "Nombre o identificador incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-                            }
+                for (Usuario usu : usuarios) {
+                    if (usu.getIdentificador().equals(identificador) && usu.getNombre().equals(nombre)) {
+                        usuarioEncontrado = true;
+
+                        if (usu.isEsProveedor()) {
+                            modelo.setUsuario(usu);
+                            PrincipalProvVista ventana = new PrincipalProvVista();
+                            ventana.setVisible(true);
+                            vista.dispose();
+                            controladorProveedor cont = new controladorProveedor(modelo, ventana);
+                        } else {
+                            modelo.setUsuario(usu);
+                            PrincipalUsuVista ventana = new PrincipalUsuVista();
+                            ventana.setVisible(true);
+                            vista.dispose();
+                            controladorComprador cont = new controladorComprador(modelo, ventana);
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Nombre e Identificador no pueden estar vacíos.", "Error", JOptionPane.ERROR_MESSAGE);
+
+                        break; // Termina el bucle si se encuentra un usuario válido
                     }
-                }else{
-                    JOptionPane.showMessageDialog(null, "No se encontraron datos disponibles, cargue los datos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
+
+                if (!usuarioEncontrado) {
+                    JOptionPane.showMessageDialog(null, "Nombre o identificador incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Nombre e Identificador no pueden estar vacíos.", "Error", JOptionPane.ERROR_MESSAGE);
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "No se encontraron datos disponibles, cargue los datos.", "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+}
     
     }
     

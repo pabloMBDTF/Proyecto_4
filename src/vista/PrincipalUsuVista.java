@@ -166,6 +166,10 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
         btnComprar.addActionListener(listener);
     }
     
+    public void addBtnHistorialListener(ActionListener listener) {
+        btnHistorial.addActionListener(listener);
+    }
+    
     
     public void addBtnSalirListener(ActionListener listener) {
         btnSalir.addActionListener(listener);
