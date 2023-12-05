@@ -18,9 +18,11 @@ abstract public class Usuario {
     private ArrayList<String> productos;
     private ArrayList<Integer> cantidades;
     private boolean esProveedor;
+    private int dinero;
 
     public Usuario(String nombre, String identificador, boolean esProveedor) {
         this.nombre = nombre;
+        this.dinero = 0;
         this.identificador = identificador;
         this.productos = new ArrayList<String>();
         this.cantidades = new ArrayList<Integer>();
@@ -65,6 +67,14 @@ abstract public class Usuario {
 
     public void setEsProveedor(boolean esProveedor) {
         this.esProveedor = esProveedor;
+    }
+    
+    public void sumarDinero(int cantidad ){
+        dinero += cantidad;
+    }
+    
+    public int getDinero(){
+        return dinero;
     }
     
     abstract public ArrayList<String> getProductosProveedor();

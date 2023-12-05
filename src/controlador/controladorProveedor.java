@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import model.Producto;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
+import vista.ProveedorStadisticasVista;
 
 /**
  *
@@ -25,6 +26,7 @@ public class controladorProveedor {
         this.vista = vista;
         vista.addBtnCrearListener(new CrearProducto());
         vista.addBtnSalirListener(new SalirListener());
+        vista.addBtnGananciasListener(new GananciasListener());
         agregarRegistrosLista();
         
     }
@@ -61,6 +63,19 @@ public class controladorProveedor {
     
     }
     
+    
+    class GananciasListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            ProveedorStadisticasVista ventana = new ProveedorStadisticasVista();
+            ventana.setVisible(true);
+            vista.dispose();
+            controladorStatsProveedor cont = new controladorStatsProveedor(modelo, ventana);
+        }
+    
+    
+    }
     
     void agregarRegistrosLista(){
         vista.getModeloTabla().setRowCount(0);

@@ -11,12 +11,17 @@
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/UsuComprador.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Usuario.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/LoginVista.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorStatsProveedor.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/DAO/UsuarioDao.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Supermercado.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/CrearUsuVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorComprador.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorProveedor.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/CompradorEstadisticasVista.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/PrincipalProvVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/proyecto_4/Proyecto_4.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorCrearUsuario.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ProveedorStadisticasVista.java</file>
         </group>
     </open-files>
 </project-private>

@@ -271,6 +271,9 @@ public class PrincipalProvVista extends javax.swing.JFrame {
         btnSalir.addActionListener(listener);
     }
     
+    public void addBtnGananciasListener(ActionListener listener) {
+        btnGanancias.addActionListener(listener);
+    }
     
     public JButton getBtnCrearProducto() {
         return btnCrearProducto;
