@@ -99,13 +99,13 @@ abstract public class Usuario {
     
     
     
-    abstract public ArrayList<String> getProductosProveedor();
-    abstract public ArrayList<String> getNomProductosProveedor();
-    abstract public ArrayList<Integer> getCantidadProductosProveedor();
-    abstract public int getGananciasProveedor();
-    abstract public ArrayList<String> getNombreProductosComprador();
-    abstract public ArrayList<Integer> getCantidadProductosComprador();
-    abstract public int getTotalComprador();
+    //abstract public ArrayList<String> getProductosProveedor();
+    //abstract public ArrayList<String> getNomProductosProveedor();
+    //abstract public ArrayList<Integer> getCantidadProductosProveedor();
+    //abstract public int getGananciasProveedor();
+    //abstract public ArrayList<String> getNombreProductosComprador();
+    //abstract public ArrayList<Integer> getCantidadProductosComprador();
+    //abstract public int getTotalComprador();
     
 
     

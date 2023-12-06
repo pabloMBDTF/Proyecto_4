@@ -104,9 +104,9 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 int cantidadCompra = cantidadActual-cantidad;
                 //producto.setCantidad(cantidadCompra);
                 System.out.println(producto.getCantidad());
-                prov.getNomProductosProveedor().add(producto.getNombre());
-                prov.getCantidadProductosProveedor().add(producto.getCantidad());
-                prov.getProductosProveedor().add(usuarioActual.getNombre());
+                //prov.getNomProductosProveedor().add(producto.getNombre());
+                //prov.getCantidadProductosProveedor().add(producto.getCantidad());
+                //prov.getProductosProveedor().add(usuarioActual.getNombre());
                 prov.sumarDinero(producto.getPrecio()*cantidad);
                 
                 VentaProv venta = new VentaProv(producto.getNombre(),
@@ -122,12 +122,12 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 
                 
                 
-                System.out.println(prov.getNomProductosProveedor());
-                System.out.println(prov.getCantidadProductosProveedor());
-                System.out.println(prov.getProductosProveedor());
+                //System.out.println(prov.getNomProductosProveedor());
+                //System.out.println(prov.getCantidadProductosProveedor());
+                //System.out.println(prov.getProductosProveedor());
                 // para el comprador 
-                usuarioActual.getNombreProductosComprador().add(producto.getNombre());
-                usuarioActual.getCantidadProductosComprador().add(producto.getCantidad());
+                //usuarioActual.getNombreProductosComprador().add(producto.getNombre());
+                //usuarioActual.getCantidadProductosComprador().add(producto.getCantidad());
                 usuarioActual.sumarDinero(producto.getPrecio()*cantidad);
                 
                 

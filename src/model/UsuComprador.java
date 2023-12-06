@@ -12,19 +12,19 @@ import java.util.ArrayList;
  */
 public class UsuComprador extends Usuario {
     
-    private ArrayList<String> nombreProductos;
-    private ArrayList<Integer> cantidad;
+    //private ArrayList<String> nombreProductos;
+    //private ArrayList<Integer> cantidad;
     private int totalComprado;
     
     public UsuComprador(String nombre, String identificador, String telefono, String direccion, boolean esProveedor) {
         super(nombre, identificador, telefono, direccion, esProveedor);
-        nombreProductos = new ArrayList<String>();
-        cantidad = new ArrayList<Integer>();
+        //nombreProductos = new ArrayList<String>();
+        //cantidad = new ArrayList<Integer>();
         totalComprado = 0;
         
     }
 
-    @Override
+    /*@Override
     public ArrayList<String> getProductosProveedor() {
         return null;
     }
@@ -46,17 +46,17 @@ public class UsuComprador extends Usuario {
 
     @Override
     public ArrayList<String> getNombreProductosComprador() {
-        return nombreProductos;
+        return null;
     }
 
     @Override
     public ArrayList<Integer> getCantidadProductosComprador() {
-        return cantidad;
+        return null;
     }
 
     @Override
     public int getTotalComprador() {
         return totalComprado;
-    }
+    }*/
     
 }
