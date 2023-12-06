@@ -15,18 +15,22 @@ import java.util.ArrayList;
 abstract public class Usuario {
     private String nombre;
     private String identificador;
+    private String Telefono;
+    private String Direccion;
     private ArrayList<String> productos;
     private ArrayList<Integer> cantidades;
     private boolean esProveedor;
     private int dinero;
 
-    public Usuario(String nombre, String identificador, boolean esProveedor) {
+    public Usuario(String nombre, String identificador, String Telefono, String Direccion, boolean esProveedor) {
         this.nombre = nombre;
         this.dinero = 0;
         this.identificador = identificador;
         this.productos = new ArrayList<String>();
         this.cantidades = new ArrayList<Integer>();
         this.esProveedor = esProveedor;
+        this.Telefono = Telefono;
+        this.Direccion = Direccion;
     }
 
     public String getNombre() {

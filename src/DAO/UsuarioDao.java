@@ -23,12 +23,12 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     
 
     @Override
-    public void crearUsuario(String nombre, String id, boolean esProveedor) {
+    public void crearUsuario(String nombre, String id, String telefono, String direccion, boolean esProveedor) {
         if (esProveedor == true){
-            tienda.getUsuarios().add(new UsuProveedor(nombre,id, esProveedor));
+            tienda.getUsuarios().add(new UsuProveedor(nombre, id, telefono, direccion, esProveedor));
             System.out.println("usuario agregado");
         }else{
-            tienda.getUsuarios().add(new UsuComprador(nombre,id, esProveedor));
+            tienda.getUsuarios().add(new UsuComprador(nombre, id, telefono, direccion, esProveedor));
             System.out.println("usuario agregado");
         }
         

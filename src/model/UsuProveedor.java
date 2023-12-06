@@ -17,8 +17,8 @@ public class UsuProveedor extends Usuario {
     private ArrayList<Integer> cantidad;
     private int totalComprado;
 
-    public UsuProveedor(String nombre, String identificador, boolean esProveedor) {
-        super(nombre, identificador, esProveedor);
+    public UsuProveedor(String nombre, String identificador, String telefono, String direccion, boolean esProveedor) {
+        super(nombre, identificador, telefono, direccion, esProveedor);
         this.nombreProductos = new ArrayList<String>();
         this.nombreComprador = new ArrayList<String>();
         this.cantidad = new ArrayList<Integer>();
