@@ -7,6 +7,8 @@ package controlador;
 import DAO.UsuarioDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import model.VentaProv;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
 import vista.ProveedorStadisticasVista;
@@ -19,12 +21,16 @@ public class controladorStatsProveedor {
     private UsuarioDao modelo;
     private ProveedorStadisticasVista vista;
     private int ventas, ventaActual;
-
+    private ArrayList<VentaProv> ventass;
+    
+    
     public controladorStatsProveedor(UsuarioDao modelo, ProveedorStadisticasVista vista) {
         this.modelo = modelo;
         this.vista = vista;
+        ventass = new ArrayList<VentaProv>();
         ventas = 0;
         ventaActual = 0;
+        cargarVentass();
         
         vista.addBtnSiguienteListener(new btnSiguiente());
         vista.addBtnAtrasListener(new btnAtrasListener());
@@ -36,10 +42,13 @@ public class controladorStatsProveedor {
     }
     
     public void cargarInfo(int ventaIndex){
-        vista.getLblNombreProducto().setText(modelo.getUsuario().getNomProductosProveedor().get(ventaIndex));
-        vista.getLblCantidad().setText(String.valueOf(modelo.getUsuario().getCantidadProductosProveedor().get(ventaIndex)));
-        vista.getLblNomComprador().setText(String.valueOf(modelo.getUsuario().getProductosProveedor().get(ventaIndex)));
+        vista.getLblNombreProducto().setText(ventass.get(ventaIndex).getNombreProducto());
+        vista.getLblCantidad().setText(String.valueOf(ventass.get(ventaIndex).getCantidad()));
+        vista.getLblNomComprador().setText(ventass.get(ventaIndex).getNombreComprador());
         vista.getLblTotal().setText(String.valueOf(modelo.getUsuario().getDinero()));
+        vista.getLblDireccion().setText(ventass.get(ventaIndex).getDireccionComprador());
+        vista.getLblTelefono().setText(ventass.get(ventaIndex).getNumero());
+        vista.getLblTotalVenta().setText(String.valueOf(ventass.get(ventaIndex).getTotalVenta()));
         
     
     }
@@ -83,7 +92,7 @@ public class controladorStatsProveedor {
     
     
     public void cargarVentas(){
-        ventas = modelo.getUsuario().getCantidadProductosProveedor().size();
+        ventas = ventass.size();
     } 
     
     
@@ -103,4 +112,12 @@ public class controladorStatsProveedor {
         
     }
     
+    
+    public void cargarVentass(){
+        for(VentaProv venta : modelo.getTienda().getVentas()){
+            if (venta.getIdVendedor() == modelo.getUsuario().getIdentificador()) {
+                ventass.add(venta);
+            }
+        }
+    }
 }

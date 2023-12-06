@@ -15,10 +15,30 @@ public class Supermercado {
     
     private ArrayList<Usuario> usuarios;
     private ArrayList<Producto> productos;
+    private ArrayList<CompraUsu> Compras;
+    private ArrayList<VentaProv> ventas;
 
     public Supermercado() {
         this.usuarios = new ArrayList<Usuario>();
         this.productos = new ArrayList<Producto>();
+        this.Compras = new ArrayList<CompraUsu>();
+        this.ventas = new ArrayList<VentaProv>();
+    }
+
+    public ArrayList<CompraUsu> getCompras() {
+        return Compras;
+    }
+
+    public void setCompras(ArrayList<CompraUsu> Compras) {
+        this.Compras = Compras;
+    }
+
+    public ArrayList<VentaProv> getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(ArrayList<VentaProv> ventas) {
+        this.ventas = ventas;
     }
 
     public ArrayList<Usuario> getUsuarios() {

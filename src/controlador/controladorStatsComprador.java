@@ -7,6 +7,9 @@ package controlador;
 import DAO.UsuarioDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import model.CompraUsu;
+import model.VentaProv;
 import vista.CompradorEstadisticasVista;
 import vista.PrincipalProvVista;
 import vista.PrincipalUsuVista;
@@ -20,10 +23,12 @@ public class controladorStatsComprador {
     private UsuarioDao modelo;
     private CompradorEstadisticasVista vista;
     private int compras, comprasActual;
+    private ArrayList<CompraUsu> comprass;
 
     public controladorStatsComprador(UsuarioDao modelo, CompradorEstadisticasVista vista) {
         this.modelo = modelo;
         this.vista = vista;
+        comprass = new ArrayList<CompraUsu>();
         compras = 0;
         comprasActual = 0;
         
@@ -32,14 +37,18 @@ public class controladorStatsComprador {
         vista.addBtnVolverListener(new btnVolver());
         vista.getLblNombre().setText(modelo.getUsuario().getNombre());
         
+        cargarCompras();
         cargarInfo(comprasActual);
-        cargarVentas();
+        cargarComprasIndex();
         activarBotones();
     }
     
     public void cargarInfo(int ventaIndex){
-        vista.getLblNombreProducto().setText(modelo.getUsuario().getNombreProductosComprador().get(ventaIndex));
-        vista.getLblCantidad().setText(String.valueOf(modelo.getUsuario().getCantidadProductosComprador().get(ventaIndex)));
+        vista.getLblNombreProducto().setText(comprass.get(ventaIndex).getNombreProducto());
+        vista.getLblCantidad().setText(String.valueOf(comprass.get(ventaIndex).getCantidad()));
+        vista.getLblTotalCompra().setText(String.valueOf(comprass.get(ventaIndex).getTotalCompra()));
+        vista.getLblNombreProveedor().setText(comprass.get(ventaIndex).getNombreProveedor());
+        
         vista.getLblTotalGastado().setText(String.valueOf(modelo.getUsuario().getDinero()));
     }
     
@@ -79,8 +88,8 @@ public class controladorStatsComprador {
     }
     
     
-    public void cargarVentas(){
-        compras = modelo.getUsuario().getCantidadProductosComprador().size();
+    public void cargarComprasIndex(){
+        compras = comprass.size();
     } 
     
     
@@ -98,6 +107,14 @@ public class controladorStatsComprador {
             vista.getBtnSiguiente().setEnabled(true);
         }
         
+    }
+    
+    public void cargarCompras(){
+        for(CompraUsu compra : modelo.getTienda().getCompras()){
+            if (compra.getIdComprador()== modelo.getUsuario().getIdentificador()) {
+                comprass.add(compra);
+            }
+        }
     }
     
     

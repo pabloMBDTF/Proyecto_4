@@ -6,11 +6,13 @@ package DAO;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
+import model.CompraUsu;
 import model.Producto;
 import model.Supermercado;
 import model.UsuComprador;
 import model.UsuProveedor;
 import model.Usuario;
+import model.VentaProv;
 
 /**
  *
@@ -106,6 +108,20 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 prov.getCantidadProductosProveedor().add(producto.getCantidad());
                 prov.getProductosProveedor().add(usuarioActual.getNombre());
                 prov.sumarDinero(producto.getPrecio()*cantidad);
+                
+                VentaProv venta = new VentaProv(producto.getNombre(),
+                        usuarioActual.getNombre(),
+                        usuarioActual.getDireccion(),
+                        usuarioActual.getTelefono(), 
+                        prov.getIdentificador(), 
+                        cantidad, 
+                        cantidad*producto.getPrecio());
+                tienda.getVentas().add(venta);
+                
+                
+                
+                
+                
                 System.out.println(prov.getNomProductosProveedor());
                 System.out.println(prov.getCantidadProductosProveedor());
                 System.out.println(prov.getProductosProveedor());
@@ -113,6 +129,12 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 usuarioActual.getNombreProductosComprador().add(producto.getNombre());
                 usuarioActual.getCantidadProductosComprador().add(producto.getCantidad());
                 usuarioActual.sumarDinero(producto.getPrecio()*cantidad);
+                
+                
+                
+                CompraUsu compra = new CompraUsu(producto.getNombre(),prov.getNombre(), cantidad, producto.getPrecio()*cantidad, usuarioActual.getIdentificador());
+                tienda.getCompras().add(compra);
+                
                 producto.setCantidad(cantidadCompra);
                 
             
