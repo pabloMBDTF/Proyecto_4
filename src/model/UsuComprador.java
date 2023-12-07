@@ -14,13 +14,13 @@ public class UsuComprador extends Usuario {
     
     //private ArrayList<String> nombreProductos;
     //private ArrayList<Integer> cantidad;
-    private int totalComprado;
+    //private int totalComprado;
     
     public UsuComprador(String nombre, String identificador, String telefono, String direccion, boolean esProveedor) {
         super(nombre, identificador, telefono, direccion, esProveedor);
         //nombreProductos = new ArrayList<String>();
         //cantidad = new ArrayList<Integer>();
-        totalComprado = 0;
+        //totalComprado = 0;
         
     }
 
