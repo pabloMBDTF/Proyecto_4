@@ -50,7 +50,7 @@ public class LoginVista extends javax.swing.JFrame {
         jLabel1.setText("MINI MARKET");
 
         btnCrearPerfil.setBackground(new java.awt.Color(51, 51, 51));
-        btnCrearPerfil.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnCrearPerfil.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         btnCrearPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearPerfil.setText("Crear perfil");
         btnCrearPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -60,18 +60,18 @@ public class LoginVista extends javax.swing.JFrame {
         });
 
         btnIngresar.setBackground(new java.awt.Color(51, 51, 51));
-        btnIngresar.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
 
-        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel2.setText("nombre:");
 
-        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("identificador:");
 
         btnCargar.setBackground(new java.awt.Color(51, 51, 51));
-        btnCargar.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnCargar.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         btnCargar.setForeground(new java.awt.Color(255, 255, 255));
         btnCargar.setText("CargarDatos");
 
