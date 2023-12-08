@@ -1,1 +1,43 @@
 
+Nombre: t
+Identificador: 1
+Teléfono: 1
+Dirección: 1
+Proveedor: true
+
+Nombre: t
+Identificador: 1
+Teléfono: 1
+Dirección: 1
+Proveedor: true
+
+Nombre: p
+Identificador: 2
+Teléfono: 2
+Dirección: 2
+Proveedor: false
+
+Nombre: t
+Identificador: 2
+Teléfono: 2
+Dirección: 2
+Proveedor: true
+
+Nombre: t
+Identificador: 1
+Teléfono: 1
+Dirección: 1
+Proveedor: true
+
+Nombre: t
+Identificador: 1
+Teléfono: 1
+Dirección: 1
+Proveedor: true
+
+Nombre: p
+Identificador: 2
+Teléfono: 2
+Dirección: 2
+Proveedor: false
+

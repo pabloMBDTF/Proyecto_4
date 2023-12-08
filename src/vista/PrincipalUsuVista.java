@@ -48,6 +48,8 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         modelo = new DefaultTableModel();
         modelo.addColumn("Id");
         modelo.addColumn("Id Proveedor");
@@ -57,17 +59,30 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
         jTableProductos.setModel(modelo);
         jScrollPane1.setViewportView(jTableProductos);
 
-        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNombre.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
         lblNombre.setText("Nombre");
 
+        btnComprar.setBackground(new java.awt.Color(51, 51, 51));
+        btnComprar.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnComprar.setForeground(new java.awt.Color(255, 255, 255));
         btnComprar.setText("Comprar");
 
+        btnSalir.setBackground(new java.awt.Color(51, 51, 51));
+        btnSalir.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("Salir");
 
+        btnEditarPerfil.setBackground(new java.awt.Color(51, 51, 51));
+        btnEditarPerfil.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnEditarPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarPerfil.setText("Edit Perfil");
 
+        btnHistorial.setBackground(new java.awt.Color(51, 51, 51));
+        btnHistorial.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnHistorial.setForeground(new java.awt.Color(255, 255, 255));
         btnHistorial.setText("Historial");
 
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel1.setText("Cantidad:");
 
         CantidadJField.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +127,7 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnEditarPerfil)
                             .addComponent(btnHistorial)

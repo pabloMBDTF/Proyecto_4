@@ -52,18 +52,29 @@ public class ProveedorStadisticasVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel1.setText("Producto:");
 
+        lblNombreProducto.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblNombreProducto.setText("txt");
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("Comprador:");
 
+        jLabel4.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel4.setText("Cantidad:");
 
+        lblCantidad.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblCantidad.setText("txt");
 
+        lblNomComprador.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblNomComprador.setText("txt");
 
+        btnAtras.setBackground(new java.awt.Color(51, 51, 51));
+        btnAtras.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(255, 255, 255));
         btnAtras.setText("atras");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,24 +82,38 @@ public class ProveedorStadisticasVista extends javax.swing.JFrame {
             }
         });
 
+        btnSiguiente.setBackground(new java.awt.Color(51, 51, 51));
+        btnSiguiente.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnSiguiente.setForeground(new java.awt.Color(255, 255, 255));
         btnSiguiente.setText("Siguiente");
 
+        jLabel7.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel7.setText("Total Generado");
 
+        lblTotal.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblTotal.setText("total");
 
+        btnVolver.setBackground(new java.awt.Color(51, 51, 51));
+        btnVolver.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver.setText("Volver");
 
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel2.setText("Direccion:");
 
+        lblDireccion.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblDireccion.setText("txt");
 
+        lblTotalVenta.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblTotalVenta.setText("txt");
 
+        jLabel8.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel8.setText("Telefono:");
 
+        jLabel9.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel9.setText("Total Venta:");
 
+        lblTelefono.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblTelefono.setText("txt");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

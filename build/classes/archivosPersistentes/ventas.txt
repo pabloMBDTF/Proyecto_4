@@ -1,1 +1,49 @@
 
+Producto: 3
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 1
+Total: 30
+
+Producto: 3
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 1
+Total: 30
+
+Producto: 3
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 1
+Total: 30
+
+Producto: ttt
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 2
+Total: 60
+
+Producto: ttt
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 2
+Total: 60
+
+Producto: caremonda
+Comprador: p
+Dirección: 2
+Teléfono: 2
+Proveedor: 1
+Cantidad: 1
+Total: 30
+

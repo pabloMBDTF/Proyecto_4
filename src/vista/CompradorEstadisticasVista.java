@@ -49,33 +49,60 @@ public class CompradorEstadisticasVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnVolver.setText("VOlver");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnVolver.setBackground(new java.awt.Color(51, 51, 51));
+        btnVolver.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
+
+        lblNombre.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
         lblNombre.setText("nombre");
 
+        lblCantidad.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblCantidad.setText("cantidad");
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("Nombre del proveedor");
 
+        jLabel5.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel5.setText("Cantidad");
 
+        lblNombreProducto.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblNombreProducto.setText("nombre");
 
+        jLabel7.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel7.setText("Total Comprado");
 
+        lblTotalGastado.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblTotalGastado.setText("totalComp");
 
+        btnAtras.setBackground(new java.awt.Color(51, 51, 51));
+        btnAtras.setFont(new java.awt.Font("Dubai Light", 0, 12)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(255, 255, 255));
         btnAtras.setText("Atras");
 
+        btnSiguiente.setBackground(new java.awt.Color(51, 51, 51));
+        btnSiguiente.setFont(new java.awt.Font("Dubai Light", 0, 12)); // NOI18N
+        btnSiguiente.setForeground(new java.awt.Color(255, 255, 255));
         btnSiguiente.setText("Siguiente");
 
+        jLabel4.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel4.setText("Nombre del producto");
 
+        lblTotalCompra.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblTotalCompra.setText("nombre");
 
+        jLabel6.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel6.setText("Total Compra");
 
+        lblNombreProveedor.setBackground(new java.awt.Color(255, 255, 219));
+        lblNombreProveedor.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         lblNombreProveedor.setText("nombre");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -127,7 +154,7 @@ public class CompradorEstadisticasVista extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblNombreProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -169,6 +196,10 @@ public class CompradorEstadisticasVista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments

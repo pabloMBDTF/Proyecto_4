@@ -44,8 +44,14 @@ public class LoginVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("titulo");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        jLabel1.setText("MINI MARKET");
+
+        btnCrearPerfil.setBackground(new java.awt.Color(51, 51, 51));
+        btnCrearPerfil.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnCrearPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearPerfil.setText("Crear perfil");
         btnCrearPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,12 +59,20 @@ public class LoginVista extends javax.swing.JFrame {
             }
         });
 
+        btnIngresar.setBackground(new java.awt.Color(51, 51, 51));
+        btnIngresar.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
 
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
         jLabel2.setText("nombre:");
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
         jLabel3.setText("identificador:");
 
+        btnCargar.setBackground(new java.awt.Color(51, 51, 51));
+        btnCargar.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
+        btnCargar.setForeground(new java.awt.Color(255, 255, 255));
         btnCargar.setText("CargarDatos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -81,7 +95,7 @@ public class LoginVista extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(identificadorJField, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)

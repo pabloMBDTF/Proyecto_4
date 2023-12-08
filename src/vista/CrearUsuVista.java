@@ -49,9 +49,13 @@ public class CrearUsuVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("nombre:");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setText("identidficador:");
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        jLabel1.setText("nombre");
+
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        jLabel2.setText("identidficador");
 
         nombreJField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,8 +63,11 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("Activa este check para ser un proveedor");
 
+        jCheckBoxProveedor.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBoxProveedor.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jCheckBoxProveedor.setText("Proveedor");
         jCheckBoxProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +75,9 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
+        btnCrear.setBackground(new java.awt.Color(51, 51, 51));
+        btnCrear.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnCrear.setForeground(new java.awt.Color(255, 255, 255));
         btnCrear.setText("Crear");
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +85,9 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
+        btnVolver.setBackground(new java.awt.Color(51, 51, 51));
+        btnVolver.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver.setText("volver");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +95,10 @@ public class CrearUsuVista extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel4.setText("telefono");
 
+        jLabel5.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel5.setText("Direccion");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -104,15 +119,15 @@ public class CrearUsuVista extends javax.swing.JFrame {
                         .addComponent(jLabel3)))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(identificadorJField, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .addComponent(identificadorJField, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                     .addComponent(nombreJField)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(jCheckBoxProveedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE))
-                    .addComponent(telefonoJField, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .addComponent(telefonoJField, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                     .addComponent(DireccionJField))
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(268, 268, 268)
                 .addComponent(btnCrear)
@@ -143,7 +158,7 @@ public class CrearUsuVista extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxProveedor)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrear)
                     .addComponent(btnVolver))

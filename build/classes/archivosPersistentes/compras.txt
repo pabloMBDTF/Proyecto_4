@@ -1,1 +1,37 @@
 
+Producto: 3
+Proveedor: t
+Cantidad: 1
+Total: 30
+Comprador: 2
+
+Producto: 3
+Proveedor: t
+Cantidad: 1
+Total: 30
+Comprador: 2
+
+Producto: 3
+Proveedor: t
+Cantidad: 1
+Total: 30
+Comprador: 2
+
+Producto: ttt
+Proveedor: t
+Cantidad: 2
+Total: 60
+Comprador: 2
+
+Producto: ttt
+Proveedor: t
+Cantidad: 2
+Total: 60
+Comprador: 2
+
+Producto: caremonda
+Proveedor: t
+Cantidad: 1
+Total: 30
+Comprador: 2
+

@@ -1,0 +1,24 @@
+Nombre: 3
+ID Producto: 3
+ID Proveedor: 1
+Cantidad: 2
+Precio: 30
+
+Nombre: ttt
+ID Producto: 2
+ID Proveedor: 1
+Cantidad: 9
+Precio: 30
+
+Nombre: ttt
+ID Producto: 2
+ID Proveedor: 1
+Cantidad: 9
+Precio: 30
+
+Nombre: caremonda
+ID Producto: 4
+ID Proveedor: 1
+Cantidad: 1
+Precio: 30
+

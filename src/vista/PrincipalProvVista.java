@@ -59,9 +59,14 @@ public class PrincipalProvVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblNombre.setFont(new java.awt.Font("Dubai Light", 0, 18)); // NOI18N
         lblNombre.setText("Nombre");
 
+        btnSalir.setBackground(new java.awt.Color(51, 51, 51));
+        btnSalir.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +74,9 @@ public class PrincipalProvVista extends javax.swing.JFrame {
             }
         });
 
+        btnGanancias.setBackground(new java.awt.Color(51, 51, 51));
+        btnGanancias.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnGanancias.setForeground(new java.awt.Color(255, 255, 255));
         btnGanancias.setText("ganancias");
 
         modeloTabla = new DefaultTableModel();
@@ -85,14 +93,25 @@ public class PrincipalProvVista extends javax.swing.JFrame {
             jTableProductos.getColumnModel().getColumn(3).setResizable(false);
         }
 
+        btnPerfil.setBackground(new java.awt.Color(51, 51, 51));
+        btnPerfil.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnPerfil.setText("Perfil");
 
+        idJField.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+
+        nombreJField.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel1.setText("ID");
 
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel2.setText("Nombre");
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("Precio");
 
+        jLabel4.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel4.setText("Cantidad");
 
         SpinnerNumberModel modelJSpinner = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
@@ -101,6 +120,9 @@ public class PrincipalProvVista extends javax.swing.JFrame {
         SpinnerNumberModel modelJSpinnerr = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
         jSpinnerCantidad.setModel(modelJSpinnerr);
 
+        btnEliminarProducto.setBackground(new java.awt.Color(51, 51, 51));
+        btnEliminarProducto.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnEliminarProducto.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarProducto.setText("Eliminar Producto");
         btnEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +130,9 @@ public class PrincipalProvVista extends javax.swing.JFrame {
             }
         });
 
+        btnCrearProducto.setBackground(new java.awt.Color(51, 51, 51));
+        btnCrearProducto.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnCrearProducto.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearProducto.setText("Crear Producto");
         btnCrearProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +140,9 @@ public class PrincipalProvVista extends javax.swing.JFrame {
             }
         });
 
+        btnActualizarProducto.setBackground(new java.awt.Color(51, 51, 51));
+        btnActualizarProducto.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnActualizarProducto.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizarProducto.setText("Actualizar Producto");
         btnActualizarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +231,7 @@ public class PrincipalProvVista extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jSpinnerPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(80, Short.MAX_VALUE))
+                        .addContainerGap(52, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
