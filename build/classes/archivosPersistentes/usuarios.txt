@@ -1,19 +1,1 @@
 
-Nombre: juan
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
-
-Nombre: h
-Identificador: 2
-Teléfono: 2
-Dirección: 2
-Proveedor: false
-
-Nombre: juan
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
-

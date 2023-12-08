@@ -1,9 +1,11 @@
 package DAO;
 
 import java.util.ArrayList;
+import model.CompraUsu;
 import model.Producto;
 import model.UsuProveedor;
 import model.Usuario;
+import model.VentaProv;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -28,5 +30,6 @@ public interface InterfaceUsuarioDao {
     
     public void guardarUsuarioEnArchivo();
     public void guardarProductoEnArchivo();
-    
+    public void guardarCompraEnArchivo();
+    public void guardarVentaEnArchivo();
 }

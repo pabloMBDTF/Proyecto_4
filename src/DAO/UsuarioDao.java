@@ -132,7 +132,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                         cantidad, 
                         cantidad*producto.getPrecio());
                 tienda.getVentas().add(venta);
-                
+                guardarVentaEnArchivo();
                 
                 
                 
@@ -151,6 +151,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 tienda.getCompras().add(compra);
                 
                 producto.setCantidad(cantidadCompra);
+                guardarCompraEnArchivo();
                 
             
             }
@@ -225,7 +226,56 @@ public void guardarProductoEnArchivo() {
         }
     }
 }
-    
+
+@Override
+public void guardarCompraEnArchivo() {
+    String archivo = "src/archivosPersistentes/compras.txt";
+    for(CompraUsu compra: tienda.getCompras()){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+            bw.write("Producto: " + compra.getNombreProducto());
+            bw.newLine();
+            bw.write("Proveedor: " + compra.getNombreProveedor());
+            bw.newLine();
+            bw.write("Cantidad: " + compra.getCantidad());
+            bw.newLine();
+            bw.write("Total: " + compra.getTotalCompra());
+            bw.newLine();
+            bw.write("Comprador: " + compra.getIdComprador());
+            bw.newLine();
+            bw.newLine(); // Agregar una línea en blanco entre compras
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }   
+}
+
+@Override
+public void guardarVentaEnArchivo() {
+    String archivo = "src/archivosPersistentes/ventas.txt";
+        for(VentaProv venta: tienda.getVentas()){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+            bw.write("Producto: " + venta.getNombreProducto());
+            bw.newLine();
+            bw.write("Comprador: " + venta.getNombreComprador());
+            bw.newLine();
+            bw.write("Dirección: " + venta.getDireccionComprador());
+            bw.newLine();
+            bw.write("Teléfono: " + venta.getNumero());
+            bw.newLine();
+            bw.write("Proveedor: " + venta.getIdVendedor());
+            bw.newLine();
+            bw.write("Cantidad: " + venta.getCantidad());
+            bw.newLine();
+            bw.write("Total: " + venta.getTotalVenta());
+            bw.newLine();
+            bw.newLine(); // Agregar una línea en blanco entre ventas
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
     
     
     

@@ -1,7 +1,0 @@
-
-Nombre: leche
-ID Producto: 123
-ID Proveedor: 1
-Cantidad: 4
-Precio: 4500
-
