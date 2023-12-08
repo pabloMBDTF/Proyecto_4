@@ -27,5 +27,6 @@ public interface InterfaceUsuarioDao {
     //public Usuario getPersona(String nombre, boolean esProveedor);
     
     public void guardarUsuarioEnArchivo();
+    public void guardarProductoEnArchivo();
     
 }

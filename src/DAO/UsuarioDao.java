@@ -204,6 +204,27 @@ public void guardarUsuarioEnArchivo() {
     }
 }
 
+@Override
+public void guardarProductoEnArchivo() {
+    for(Producto producto: tienda.getProductos()){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/archivosPersistentes/productos.txt", true))) {
+            bw.write("Nombre: " + producto.getNombre());
+            bw.newLine();
+            bw.write("ID Producto: " + producto.getIdProducto());
+            bw.newLine();
+            bw.write("ID Proveedor: " + producto.getIdProveedor());
+            bw.newLine();
+            bw.write("Cantidad: " + producto.getCantidad());
+            bw.newLine();
+            bw.write("Precio: " + producto.getPrecio());
+            bw.newLine();
+            bw.newLine(); // Agregar una línea en blanco entre productos
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
     
     
     

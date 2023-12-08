@@ -42,6 +42,7 @@ public class controladorProveedor {
             int precio = Integer.parseInt(spinnerValuePrecio.toString());
             System.out.println(cantidad);
             modelo.crearProducto(vista.getNombreJField().getText(), vista.getIdJField().getText(), modelo.getUsuario().getIdentificador(), cantidad, precio);
+            modelo.guardarProductoEnArchivo();
             vista.getIdJField().setText("");
             vista.getNombreJField().setText("");
             vista.getjSpinnerCantidad().setValue(1);
