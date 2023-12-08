@@ -31,6 +31,7 @@ public class controladorCrearUsuario {
         public void actionPerformed(ActionEvent e) {
            
             modelo.crearUsuario(vista.getNombreJField().getText(), vista.getIdentificadorJField().getText(), vista.getTelefonoJField().getText(), vista.getDireccionJField().getText(),vista.getjCheckBoxProveedor().isSelected());
+            modelo.guardarUsuarioEnArchivo();
             System.out.println(modelo.getTienda().getUsuarios());
             LoginVista ventana = new LoginVista();
             ventana.setVisible(true);

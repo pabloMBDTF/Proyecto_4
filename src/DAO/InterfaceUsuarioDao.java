@@ -26,4 +26,6 @@ public interface InterfaceUsuarioDao {
     //public ArrayList<Usuario> getUsuarios(String tipo);
     //public Usuario getPersona(String nombre, boolean esProveedor);
     
+    public void guardarUsuarioEnArchivo();
+    
 }

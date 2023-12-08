@@ -4,6 +4,9 @@
  */
 package DAO;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import model.CompraUsu;
@@ -177,6 +180,29 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         productoActual.setPrecio(precio);
         System.out.println("tirnqui");
     }
+    
+    @Override
+public void guardarUsuarioEnArchivo() {
+    String archivo = "src/archivosPersistentes/usuarios.txt";
+    for(Usuario usuario: tienda.getUsuarios()){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+            bw.write("Nombre: " + usuario.getNombre());
+            bw.newLine();
+            bw.write("Identificador: " + usuario.getIdentificador());
+            bw.newLine();
+            bw.write("Teléfono: " + usuario.getTelefono());
+            bw.newLine();
+            bw.write("Dirección: " + usuario.getDireccion());
+            bw.newLine();
+            bw.write("Proveedor: " + usuario.isEsProveedor());
+            bw.newLine();
+            bw.newLine(); // Agregar una línea en blanco entre usuarios
+            bw.flush();
+        } catch (IOException e) {
+        e.printStackTrace();
+        }
+    }
+}
 
     
     
