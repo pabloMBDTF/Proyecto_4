@@ -22,6 +22,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     
     private Supermercado tienda = new Supermercado(); 
     private Usuario usuarioActual;
+    private Producto productoActual;
     
 
     @Override
@@ -71,6 +72,17 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void setUsuario(Usuario usuario) {
         this.usuarioActual = usuario;
     }
+
+    public Producto getProductoActual() {
+        return productoActual;
+    }
+
+    public void setProductoActual(Producto productoActual) {
+        this.productoActual = productoActual;
+    }
+    
+    
+    
 
     @Override
     public void crearProducto(String nombre, String idProducto, String idProveedor, int cantidad, int precio) {
@@ -156,6 +168,14 @@ public class UsuarioDao implements InterfaceUsuarioDao{
 
         throw new NoSuchElementException("Proveedor no encontrado con el identificador: " + idproducto);
         
+    }
+
+    @Override
+    public void actualizarProductos(String nombre, int cantidad, int precio) {
+        productoActual.setNombre(nombre);
+        productoActual.setCantidad(cantidad);
+        productoActual.setPrecio(precio);
+        System.out.println("tirnqui");
     }
 
     

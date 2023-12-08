@@ -17,8 +17,6 @@ abstract public class Usuario {
     private String identificador;
     private String Telefono;
     private String Direccion;
-    //private ArrayList<String> productos;
-    //private ArrayList<Integer> cantidades;
     private boolean esProveedor;
     private int dinero;
 

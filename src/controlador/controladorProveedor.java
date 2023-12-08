@@ -77,6 +77,17 @@ public class controladorProveedor {
     
     }
     
+    
+    class ActualizarProductoListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+        }
+    
+    
+    }
+    
     void agregarRegistrosLista(){
         vista.getModeloTabla().setRowCount(0);
         for(Producto producto : modelo.getTienda().getProductos()){

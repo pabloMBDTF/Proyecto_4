@@ -38,23 +38,38 @@ public class controladorComprador {
         @Override
         public void actionPerformed(ActionEvent e) {
             int filaSeleccionada = vista.getjTableProductos().getSelectedRow();
-
+            
             if (filaSeleccionada != -1) {
                 String idProducto = (String) vista.getModelo().getValueAt(filaSeleccionada, 0);
-                int cantidad = Integer.parseInt(vista.getModelo().getValueAt(filaSeleccionada, 3).toString());
+                int cantidadDisponible = Integer.parseInt(vista.getModelo().getValueAt(filaSeleccionada, 3).toString());
                 String idComprador = (String) vista.getModelo().getValueAt(filaSeleccionada, 1);
-                System.out.println(idProducto );
-                System.out.println(cantidad );
-                System.out.println(idComprador );
 
-                modelo.realizarCompra(idProducto, cantidad, idComprador);
-                agregarRegistrosLista();
+                // Obtener la cantidad ingresada desde la vista
+                String cantidadIngresadaTexto = vista.getCantidadJField().getText();
+
+                // Verificar si la cantidad ingresada es un número
+                if (esNumero(cantidadIngresadaTexto)) {
+                    int cantidadIngresada = Integer.parseInt(cantidadIngresadaTexto);
+
+                    // Verificar si la cantidad ingresada es igual o menor que la cantidad disponible
+                    if (cantidadIngresada <= cantidadDisponible) {
+                        // Realizar la compra
+                        System.out.println(idProducto);
+                        System.out.println(cantidadIngresada);
+                        System.out.println(idComprador);
+
+                        modelo.realizarCompra(idProducto, cantidadIngresada, idComprador);
+                        agregarRegistrosLista();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "La cantidad ingresada es mayor que la cantidad disponible", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "La cantidad ingresada no es un número válido", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                }
             } else {
                 // No hay fila seleccionada
                 JOptionPane.showMessageDialog(null, "No hay fila seleccionada", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
-            
-            
         }
     
     }
@@ -84,6 +99,8 @@ public class controladorComprador {
     }
     
     
+    
+    
     void agregarRegistrosLista(){
         vista.getModelo().setRowCount(0);
         for(Producto producto : modelo.getTienda().getProductos()){
@@ -103,6 +120,16 @@ public class controladorComprador {
         };
         vista.getModelo().addRow(fila);
     }
+    
+    
+    private boolean esNumero(String cadena) {
+    try {
+        Integer.parseInt(cadena);
+        return true;
+    } catch (NumberFormatException e) {
+        return false;
+    }
+}
     
 
     public PrincipalUsuVista getVista() {

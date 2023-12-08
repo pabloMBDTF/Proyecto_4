@@ -6,6 +6,7 @@
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorLogin.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/PrincipalUsuVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/UsuProveedor.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ActualizarProductoVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/DAO/InterfaceUsuarioDao.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Producto.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/CompraUsu.java</file>
@@ -23,6 +24,7 @@
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/PrincipalProvVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/proyecto_4/Proyecto_4.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorCrearUsuario.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorActualizarProducto.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorStatsComprador.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ProveedorStadisticasVista.java</file>
         </group>

@@ -22,7 +22,7 @@ public interface InterfaceUsuarioDao {
     public Usuario getProvedor(String id);
     public void realizarCompra(String idProdducto, int cantidad, String idVendedor);
     public Producto getProducto(String idproducto);
-    
+    public void actualizarProductos(String nombre, int cantidad, int Precio);
     //public ArrayList<Usuario> getUsuarios(String tipo);
     //public Usuario getPersona(String nombre, boolean esProveedor);
     
