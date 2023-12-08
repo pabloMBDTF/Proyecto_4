@@ -7,7 +7,9 @@ package controlador;
 import DAO.UsuarioDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.Producto;
+import vista.ActualizarProductoVista;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
 import vista.ProveedorStadisticasVista;
@@ -27,6 +29,8 @@ public class controladorProveedor {
         vista.addBtnCrearListener(new CrearProducto());
         vista.addBtnSalirListener(new SalirListener());
         vista.addBtnGananciasListener(new GananciasListener());
+        vista.addBtnActualizarProductoListener(new ActualizarProductoListener());
+        vista.addBtnEliminarProductoListener(new btnEliminarProducto());
         agregarRegistrosLista();
         
     }
@@ -83,9 +87,35 @@ public class controladorProveedor {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            int filaSeleccionada = vista.getjTableProductos().getSelectedRow();
+            if (filaSeleccionada != -1) {
+                String idProducto = (String) vista.getModeloTabla().getValueAt(filaSeleccionada, 0);
+                for(Producto producto : modelo.getTienda().getProductos()){
+                    if (producto.getIdProducto() == idProducto) {
+                        modelo.setProductoActual(producto);
+                        ActualizarProductoVista ventana = new ActualizarProductoVista();
+                        ventana.setVisible(true);
+                        vista.dispose();
+                        controladorActualizarProducto cont = new controladorActualizarProducto(modelo, ventana);
+                        break;
+                    }
+                }
+                
+            }
         }
+    }
     
+    class btnEliminarProducto implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int filaSeleccionada = vista.getjTableProductos().getSelectedRow();
+            if (filaSeleccionada != -1) {
+                String idProducto = (String) vista.getModeloTabla().getValueAt(filaSeleccionada, 0);
+                modelo.eliminarProducto(idProducto);
+                agregarRegistrosLista();
+            }
+        }
     
     }
     

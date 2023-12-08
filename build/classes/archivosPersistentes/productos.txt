@@ -1,0 +1,48 @@
+Nombre: wweq
+ID Producto: 12211
+ID Proveedor: 1
+Cantidad: 1
+Precio: 1
+
+Nombre: wqq
+ID Producto: 1212
+ID Proveedor: 2
+Cantidad: 6
+Precio: 5
+
+Nombre: ppp
+ID Producto: 2121
+ID Proveedor: 1
+Cantidad: 7
+Precio: 0
+
+Nombre: pene
+ID Producto: 2121
+ID Proveedor: 1
+Cantidad: 2
+Precio: 20000
+
+Nombre: no
+ID Producto: 333
+ID Proveedor: 1
+Cantidad: 0
+Precio: 0
+
+Nombre: pene
+ID Producto: 111
+ID Proveedor: 1
+Cantidad: 6
+Precio: 4
+
+Nombre: aaaa
+ID Producto: 1111
+ID Proveedor: 1
+Cantidad: 3
+Precio: 4
+
+Nombre: pene
+ID Producto: 12312
+ID Proveedor: 1
+Cantidad: 1
+Precio: 4
+
