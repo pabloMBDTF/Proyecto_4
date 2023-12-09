@@ -7,6 +7,7 @@ package controlador;
 import DAO.UsuarioDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import vista.ActualizarUsuarioVista;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
@@ -35,12 +36,16 @@ public class controladorActualizarUsuario {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            modelo.eliminarUsuario();
-            LoginVista ventana = new LoginVista();
-            ventana.setVisible(true);
-            vista.dispose();
-            controladorLogin cont = new controladorLogin(modelo, ventana);
             
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Está seguro de que desea eliminar Su cuenta?", "Confirmar eliminación", JOptionPane.YES_NO_OPTION);
+
+            if (opcion == JOptionPane.YES_OPTION) {
+                modelo.eliminarUsuario();
+                LoginVista ventana = new LoginVista();
+                ventana.setVisible(true);
+                vista.dispose();
+                controladorLogin cont = new controladorLogin(modelo, ventana); 
+            }          
         }
     }
     
@@ -53,11 +58,17 @@ public class controladorActualizarUsuario {
             String direccion = vista.getDireccionJField().getText();
             String telefono = vista.getTelefonoJField().getText();
             modelo.actualizarPersona(nombre, direccion, telefono);
-            PrincipalUsuVista ventana = new PrincipalUsuVista();
-            ventana.setVisible(true);
-            vista.dispose();
-            controladorComprador cont = new controladorComprador(modelo, ventana);
-            
+            if (modelo.getUsuario().isEsProveedor() == true) {
+                PrincipalProvVista ventana = new PrincipalProvVista();
+                ventana.setVisible(true);
+                vista.dispose();
+                controladorProveedor cont = new controladorProveedor(modelo, ventana);
+            }else{
+                PrincipalUsuVista ventana = new PrincipalUsuVista();
+                ventana.setVisible(true);
+                vista.dispose();
+                controladorComprador cont = new controladorComprador(modelo, ventana);
+            }
         }
     }
     

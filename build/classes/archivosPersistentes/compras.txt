@@ -35,3 +35,15 @@ Cantidad: 1
 Total: 30
 Comprador: 2
 
+Producto: aaaa
+Proveedor: p
+Cantidad: 1
+Total: 1
+Comprador: 2
+
+Producto: eqqwwq
+Proveedor: p
+Cantidad: 3
+Total: 12
+Comprador: 2
+

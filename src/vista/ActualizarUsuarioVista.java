@@ -59,7 +59,7 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
 
         btnVolver.setText("salir");
 
-        btnEliminarCuenta.setText("Eliminar ");
+        btnEliminarCuenta.setText("Eliminar Cuenta");
         btnEliminarCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarCuentaActionPerformed(evt);
@@ -80,7 +80,7 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
                         .addGap(108, 108, 108)
                         .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnEliminarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,7 +92,7 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
                             .addComponent(direccionJField)
                             .addComponent(nombreJField)
                             .addComponent(telefonoJField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -4,29 +4,28 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorLogin.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/archivosPersistentes/productos.txt</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/PrincipalUsuVista.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/UsuProveedor.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ActualizarProductoVista.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/archivosPersistentes/compras.txt</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/DAO/InterfaceUsuarioDao.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorActualizarUsuario.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Producto.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/CompraUsu.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/UsuComprador.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Usuario.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/LoginVista.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorStatsProveedor.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/archivosPersistentes/usuarios.txt</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/DAO/UsuarioDao.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/Supermercado.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/model/VentaProv.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/CrearUsuVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorComprador.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorProveedor.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/CompradorEstadisticasVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/PrincipalProvVista.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/CompradorEstadisticasVista.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/proyecto_4/Proyecto_4.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorCrearUsuario.java</file>
             <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorActualizarProducto.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/controlador/controladorStatsComprador.java</file>
-            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ProveedorStadisticasVista.java</file>
+            <file>file:/C:/Users/pablo/OneDrive/Escritorio/Proyecto_4/src/vista/ActualizarUsuarioVista.java</file>
         </group>
     </open-files>
 </project-private>

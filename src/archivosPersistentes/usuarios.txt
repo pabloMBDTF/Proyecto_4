@@ -36,3 +36,178 @@ Dirección: wdsa
 Proveedor: true
 Dinero: 0
 
+Nombre: 
+Identificador: 
+Teléfono: 
+Dirección: 
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 123123
+Dirección: aca
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 43223
+Dirección: dsfd
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 32443
+Dirección: wrerwe
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 32443
+Dirección: wrerwe
+Proveedor: true
+Dinero: 0
+
+Nombre: q
+Identificador: 2
+Teléfono: 33234
+Dirección: wrerwer
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 234232
+Dirección: eewew
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 234232
+Dirección: eewew
+Proveedor: true
+Dinero: 0
+
+Nombre: q
+Identificador: 2
+Teléfono: 3432
+Dirección: ewewr
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 3243
+Dirección: ewre
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 32434
+Dirección: asdsa
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 232432
+Dirección: aca
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 2343
+Dirección: edfs
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 2343
+Dirección: edfs
+Proveedor: true
+Dinero: 0
+
+Nombre: q
+Identificador: 2
+Teléfono: 3234
+Dirección: erwrr
+Proveedor: false
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 2132243
+Dirección: gjgjhghjg
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 324
+Dirección: werwe
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 123
+Teléfono: 123121
+Dirección: ccxxv
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 123
+Teléfono: 123121
+Dirección: ccxxv
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 2
+Teléfono: 32434
+Dirección: werewr
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 433234
+Dirección: adadsd
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 324
+Dirección: erewe
+Proveedor: true
+Dinero: 0
+
+Nombre: p
+Identificador: 1
+Teléfono: 324342
+Dirección: dffgfdg
+Proveedor: true
+Dinero: 0
+
+Nombre: pablito
+Identificador: 1
+Teléfono: 324342
+Dirección: dffgfdg
+Proveedor: true
+Dinero: 0
+
+Nombre: q
+Identificador: 2
+Teléfono: 332234
+Dirección: dsfdsfd
+Proveedor: false
+Dinero: 0
+

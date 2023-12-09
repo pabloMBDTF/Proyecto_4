@@ -47,3 +47,19 @@ Proveedor: 1
 Cantidad: 1
 Total: 30
 
+Producto: aaaa
+Comprador: q
+Dirección: wrerwer
+Teléfono: 33234
+Proveedor: 1
+Cantidad: 1
+Total: 1
+
+Producto: eqqwwq
+Comprador: q
+Dirección: ewewr
+Teléfono: 3432
+Proveedor: 1
+Cantidad: 3
+Total: 12
+

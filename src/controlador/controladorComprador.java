@@ -8,6 +8,7 @@ import DAO.UsuarioDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import model.CompraUsu;
 import model.Producto;
 import vista.ActualizarUsuarioVista;
 import vista.CompradorEstadisticasVista;
@@ -80,10 +81,20 @@ public class controladorComprador {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            CompradorEstadisticasVista ventana = new CompradorEstadisticasVista();
-            ventana.setVisible(true);
-            vista.dispose();
-            controladorStatsComprador cont = new controladorStatsComprador(modelo, ventana);
+            // Verificar si hay compras asociadas al usuario actual
+        String idUsuarioActual = modelo.getUsuario().getIdentificador();
+        boolean tieneCompras = tieneComprasAsociadas(idUsuarioActual);
+
+            if (tieneCompras) {
+                // Si hay compras, abrir la ventana de estadísticas
+                CompradorEstadisticasVista ventana = new CompradorEstadisticasVista();
+                ventana.setVisible(true);
+                vista.dispose();
+                controladorStatsComprador cont = new controladorStatsComprador(modelo, ventana);
+            } else {
+                // Mostrar ventana de advertencia
+                JOptionPane.showMessageDialog(null, "No hay compras asociadas al usuario actual", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            }
         }
     
     }
@@ -137,14 +148,23 @@ public class controladorComprador {
     
     
     private boolean esNumero(String cadena) {
-    try {
-        Integer.parseInt(cadena);
-        return true;
-    } catch (NumberFormatException e) {
-        return false;
+        try {
+            Integer.parseInt(cadena);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
-}
     
+    
+    private boolean tieneComprasAsociadas(String idUsuario) {
+        for (CompraUsu compra : modelo.getTienda().getCompras()) {
+            if (compra.getIdComprador().equals(idUsuario)) {
+                return true; // Hay compras asociadas al usuario
+            }
+        }
+        return false; // No hay compras asociadas al usuario
+    }
 
     public PrincipalUsuVista getVista() {
         return vista;
