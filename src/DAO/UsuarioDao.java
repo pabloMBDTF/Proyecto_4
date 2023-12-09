@@ -41,12 +41,17 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     }
 
     @Override
-    public void eliminarUsuario(String id, boolean proveedor) {
-       
+    public void eliminarUsuario() {
+        tienda.getUsuarios().remove(usuarioActual);
+        System.out.println("eliminado");
     }
 
     @Override
-    public void actualizarPersona(String nombre, Usuario usu) {
+    public void actualizarPersona(String nombre,  String direccion, String telefono) {
+        usuarioActual.setNombre(nombre);
+        usuarioActual.setTelefono(telefono);
+        usuarioActual.setDireccion(direccion);
+        System.out.println("done");
         
     }
 

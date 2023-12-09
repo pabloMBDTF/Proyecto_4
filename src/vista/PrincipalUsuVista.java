@@ -221,6 +221,10 @@ public class PrincipalUsuVista extends javax.swing.JFrame {
     public void addBtnSalirListener(ActionListener listener) {
         btnSalir.addActionListener(listener);
     }
+    
+    public void addBtnEditarPerfilListener(ActionListener listener) {
+        btnEditarPerfil.addActionListener(listener);
+    }
 
     public JTextField getCantidadJField() {
         return CantidadJField;

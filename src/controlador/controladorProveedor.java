@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.Producto;
 import vista.ActualizarProductoVista;
+import vista.ActualizarUsuarioVista;
 import vista.LoginVista;
 import vista.PrincipalProvVista;
 import vista.ProveedorStadisticasVista;
@@ -31,6 +32,7 @@ public class controladorProveedor {
         vista.addBtnGananciasListener(new GananciasListener());
         vista.addBtnActualizarProductoListener(new ActualizarProductoListener());
         vista.addBtnEliminarProductoListener(new btnEliminarProducto());
+        vista.addBtnPerfilListener(new btnModificarUsuario());
         agregarRegistrosLista();
         
     }
@@ -52,6 +54,19 @@ public class controladorProveedor {
             vista.getjSpinnerCantidad().setValue(1);
             agregarRegistrosLista();
         }
+    }
+    
+    
+    class btnModificarUsuario implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            ActualizarUsuarioVista ventana = new ActualizarUsuarioVista();
+            ventana.setVisible(true);
+            vista.dispose();
+            controladorActualizarUsuario cont = new controladorActualizarUsuario(modelo, ventana);
+        }
+    
     }
     
     

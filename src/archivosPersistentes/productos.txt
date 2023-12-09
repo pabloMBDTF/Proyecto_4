@@ -78,3 +78,9 @@ ID Proveedor: 2
 Cantidad: 3
 Precio: 10
 
+Nombre: 22332
+ID Producto: 111
+ID Proveedor: 1
+Cantidad: 0
+Precio: 0
+

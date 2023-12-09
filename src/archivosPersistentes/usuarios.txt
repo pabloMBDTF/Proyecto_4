@@ -1,101 +1,38 @@
 
-<<<<<<< HEAD
-Nombre: t
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
 
-Nombre: t
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
 
 Nombre: p
-Identificador: 2
-Teléfono: 2
-Dirección: 2
+Identificador: 1
+Teléfono: 111212
+Dirección: dsfs
 Proveedor: false
-
-Nombre: t
-Identificador: 2
-Teléfono: 2
-Dirección: 2
-Proveedor: true
-
-Nombre: t
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
-
-Nombre: t
-Identificador: 1
-Teléfono: 1
-Dirección: 1
-Proveedor: true
+Dinero: 0
 
 Nombre: p
-Identificador: 2
-Teléfono: 2
-Dirección: 2
-Proveedor: false
-=======
-Nombre: p
 Identificador: 1
-Teléfono: 3545
-Dirección: fhghgfh
+Teléfono: 2312
+Dirección: ddssfds
 Proveedor: true
 Dinero: 0
 
-Nombre: 1
-Identificador: p
-Teléfono: q
-Dirección: q
-Proveedor: true
-Dinero: 0
-
-Nombre: 1
-Identificador: p
-Teléfono: q
-Dirección: q
+Nombre: pabloo
+Identificador: 1
+Teléfono: 21121
+Dirección: nonas
 Proveedor: true
 Dinero: 0
 
 Nombre: q
 Identificador: 2
-Teléfono: wqwe
-Dirección: qwqweq
-Proveedor: true
+Teléfono: 21313
+Dirección: acaaa
+Proveedor: false
 Dinero: 0
 
 Nombre: p
 Identificador: 1
-Teléfono: wqee
-Dirección: qew
-Proveedor: true
-Dinero: 0
-
-Nombre: p
-Identificador: 1
-Teléfono: 21321
-Dirección: wqqeqw
-Proveedor: true
-Dinero: 0
-
-Nombre: p
-Identificador: 1
-Teléfono: 12312
-Dirección: sddfss
-Proveedor: true
-Dinero: 0
->>>>>>> 5b5b34b8ec5ffcaafb36c62d6d5a594fe7bf91d8
-
-Nombre: r
-Identificador: 2
-Teléfono: 2
-Dirección: 2
+Teléfono: 646546
+Dirección: wdsa
 Proveedor: true
 Dinero: 0
 

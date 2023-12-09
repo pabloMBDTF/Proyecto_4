@@ -354,6 +354,11 @@ public class PrincipalProvVista extends javax.swing.JFrame {
     public void addBtnEliminarProductoListener(ActionListener listener) {
         btnEliminarProducto.addActionListener(listener);
     }
+    
+    
+    public void addBtnPerfilListener(ActionListener listener) {
+        btnPerfil.addActionListener(listener);
+    }
 
     public JButton getBtnEliminarProducto() {
         return btnEliminarProducto;
