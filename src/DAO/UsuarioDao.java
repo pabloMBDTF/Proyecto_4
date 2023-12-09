@@ -114,13 +114,8 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 UsuProveedor prov =(UsuProveedor) getProvedor(idVendedor);
                 int cantidadActual = producto.getCantidad();
                 int cantidadCompra = cantidadActual-cantidad;
-                //producto.setCantidad(cantidadCompra);
                 System.out.println(producto.getCantidad());
-                //prov.getNomProductosProveedor().add(producto.getNombre());
-                //prov.getCantidadProductosProveedor().add(producto.getCantidad());
-                //prov.getProductosProveedor().add(usuarioActual.getNombre());
                 prov.sumarDinero(producto.getPrecio()*cantidad);
-                
                 VentaProv venta = new VentaProv(producto.getNombre(),
                         usuarioActual.getNombre(),
                         usuarioActual.getDireccion(),
@@ -130,25 +125,12 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                         cantidad*producto.getPrecio());
                 tienda.getVentas().add(venta);
                 guardarVentaEnArchivo();
-                
-                
-                
-                
-                //System.out.println(prov.getNomProductosProveedor());
-                //System.out.println(prov.getCantidadProductosProveedor());
-                //System.out.println(prov.getProductosProveedor());
-                // para el comprador 
-                //usuarioActual.getNombreProductosComprador().add(producto.getNombre());
-                //usuarioActual.getCantidadProductosComprador().add(producto.getCantidad());
                 usuarioActual.sumarDinero(producto.getPrecio()*cantidad);
-                
-                
-                
                 CompraUsu compra = new CompraUsu(producto.getNombre(),prov.getNombre(), cantidad, producto.getPrecio()*cantidad, usuarioActual.getIdentificador());
                 tienda.getCompras().add(compra);
-                
                 producto.setCantidad(cantidadCompra);
                 guardarCompraEnArchivo();
+                guardarUsuarioEnArchivo();
                 
             
             }
@@ -182,8 +164,12 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     @Override
     public void guardarUsuarioEnArchivo() {
         String archivo = "src/archivosPersistentes/usuarios.txt";
-        for(Usuario usuario: tienda.getUsuarios()){
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
+            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+
+            for (Usuario usuario : tienda.getUsuarios()) {
+                bw.write("Proveedor: " + usuario.isEsProveedor());
+                bw.newLine();
                 bw.write("Nombre: " + usuario.getNombre());
                 bw.newLine();
                 bw.write("Identificador: " + usuario.getIdentificador());
@@ -192,22 +178,23 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.newLine();
                 bw.write("Dirección: " + usuario.getDireccion());
                 bw.newLine();
-                bw.write("Proveedor: " + usuario.isEsProveedor());
-                bw.newLine();
                 bw.write("Dinero: " + usuario.getDinero());
                 bw.newLine();
                 bw.newLine(); // Agregar una línea en blanco entre usuarios
-                bw.flush();
-            } catch (IOException e) {
-            e.printStackTrace();
             }
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public void guardarProductoEnArchivo() {
-        for(Producto producto: tienda.getProductos()){
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/archivosPersistentes/productos.txt", true))) {
+        String archivo = "src/archivosPersistentes/productos.txt";
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
+            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+
+            for (Producto producto : tienda.getProductos()) {
                 bw.write("Nombre: " + producto.getNombre());
                 bw.newLine();
                 bw.write("ID Producto: " + producto.getIdProducto());
@@ -219,18 +206,20 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.write("Precio: " + producto.getPrecio());
                 bw.newLine();
                 bw.newLine(); // Agregar una línea en blanco entre productos
-                bw.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public void guardarCompraEnArchivo() {
         String archivo = "src/archivosPersistentes/compras.txt";
-        for(CompraUsu compra: tienda.getCompras()){
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
+            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+
+            for (CompraUsu compra : tienda.getCompras()) {
                 bw.write("Producto: " + compra.getNombreProducto());
                 bw.newLine();
                 bw.write("Proveedor: " + compra.getNombreProveedor());
@@ -242,18 +231,20 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.write("Comprador: " + compra.getIdComprador());
                 bw.newLine();
                 bw.newLine(); // Agregar una línea en blanco entre compras
-                bw.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-        }   
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void guardarVentaEnArchivo() {
         String archivo = "src/archivosPersistentes/ventas.txt";
-        for(VentaProv venta: tienda.getVentas()){
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
+            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+
+            for (VentaProv venta : tienda.getVentas()) {
                 bw.write("Producto: " + venta.getNombreProducto());
                 bw.newLine();
                 bw.write("Comprador: " + venta.getNombreComprador());
@@ -269,10 +260,10 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.write("Total: " + venta.getTotalVenta());
                 bw.newLine();
                 bw.newLine(); // Agregar una línea en blanco entre ventas
-                bw.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

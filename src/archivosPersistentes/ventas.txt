@@ -1,65 +1,16 @@
-
-Producto: 3
-Comprador: p
-Dirección: 2
-Teléfono: 2
+Producto: qwewqe
+Comprador: q
+Dirección: dfssf
+Teléfono: 3234
 Proveedor: 1
 Cantidad: 1
-Total: 30
+Total: 15
 
-Producto: 3
-Comprador: p
-Dirección: 2
-Teléfono: 2
-Proveedor: 1
-Cantidad: 1
-Total: 30
-
-Producto: 3
-Comprador: p
-Dirección: 2
-Teléfono: 2
-Proveedor: 1
-Cantidad: 1
-Total: 30
-
-Producto: ttt
-Comprador: p
-Dirección: 2
-Teléfono: 2
+Producto: qwewqe
+Comprador: q
+Dirección: dfssf
+Teléfono: 3234
 Proveedor: 1
 Cantidad: 2
-Total: 60
-
-Producto: ttt
-Comprador: p
-Dirección: 2
-Teléfono: 2
-Proveedor: 1
-Cantidad: 2
-Total: 60
-
-Producto: caremonda
-Comprador: p
-Dirección: 2
-Teléfono: 2
-Proveedor: 1
-Cantidad: 1
 Total: 30
-
-Producto: aaaa
-Comprador: q
-Dirección: wrerwer
-Teléfono: 33234
-Proveedor: 1
-Cantidad: 1
-Total: 1
-
-Producto: eqqwwq
-Comprador: q
-Dirección: ewewr
-Teléfono: 3432
-Proveedor: 1
-Cantidad: 3
-Total: 12
 

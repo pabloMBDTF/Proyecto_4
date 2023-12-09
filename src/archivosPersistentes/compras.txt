@@ -1,49 +1,12 @@
-
-Producto: 3
-Proveedor: t
-Cantidad: 1
-Total: 30
-Comprador: 2
-
-Producto: 3
-Proveedor: t
-Cantidad: 1
-Total: 30
-Comprador: 2
-
-Producto: 3
-Proveedor: t
-Cantidad: 1
-Total: 30
-Comprador: 2
-
-Producto: ttt
-Proveedor: t
-Cantidad: 2
-Total: 60
-Comprador: 2
-
-Producto: ttt
-Proveedor: t
-Cantidad: 2
-Total: 60
-Comprador: 2
-
-Producto: caremonda
-Proveedor: t
-Cantidad: 1
-Total: 30
-Comprador: 2
-
-Producto: aaaa
+Producto: qwewqe
 Proveedor: p
 Cantidad: 1
-Total: 1
+Total: 15
 Comprador: 2
 
-Producto: eqqwwq
+Producto: qwewqe
 Proveedor: p
-Cantidad: 3
-Total: 12
+Cantidad: 2
+Total: 30
 Comprador: 2
 

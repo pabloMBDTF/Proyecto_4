@@ -197,6 +197,10 @@ public class LoginVista extends javax.swing.JFrame {
         btnIngresar.addActionListener(listener);
     }
     
+    public void addBtnCargarDatosListener(ActionListener listener) {
+        btnCargar.addActionListener(listener);
+    }
+    
     
     public JButton getBtnCrearPerfil() {
         return btnCrearPerfil;
