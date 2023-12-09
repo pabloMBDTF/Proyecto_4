@@ -1,16 +1,8 @@
-Producto: qwewqe
+Producto: leche
 Comprador: q
-Dirección: dfssf
-Teléfono: 3234
+Dirección: cra
+Teléfono: 675467
 Proveedor: 1
 Cantidad: 1
-Total: 15
-
-Producto: qwewqe
-Comprador: q
-Dirección: dfssf
-Teléfono: 3234
-Proveedor: 1
-Cantidad: 2
-Total: 30
+Total: 4500
 

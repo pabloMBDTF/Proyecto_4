@@ -1,21 +1,14 @@
 Proveedor: true
 Nombre: p
 Identificador: 1
-Teléfono: 3234
-Dirección: qweqw
-Dinero: 45
+Teléfono: 3125620
+Dirección: calle
+Dinero: 4500
 
 Proveedor: false
 Nombre: q
 Identificador: 2
-Teléfono: 3234
-Dirección: dfssf
-Dinero: 45
-
-Proveedor: true
-Nombre: w
-Identificador: 3
-Teléfono: 323223
-Dirección: asdsd
-Dinero: 0
+Teléfono: 675467
+Dirección: cra
+Dinero: 4500
 

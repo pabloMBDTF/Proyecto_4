@@ -4,7 +4,9 @@
  */
 package DAO;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -278,6 +280,139 @@ public class UsuarioDao implements InterfaceUsuarioDao{
             }
         }
     }
+    
+private void cargarUsuariosDesdeArchivo() {
+    String archivoUsuarios = "src/archivosPersistentes/usuarios.txt";
+    try (BufferedReader br = new BufferedReader(new FileReader(archivoUsuarios))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            if (linea.startsWith("Proveedor:")) {
+                boolean esProveedor = Boolean.parseBoolean(linea.split(":")[1].trim());
+                String nombre = br.readLine().split(":")[1].trim();
+                String identificador = br.readLine().split(":")[1].trim();
+                String telefono = br.readLine().split(":")[1].trim();
+                String direccion = br.readLine().split(":")[1].trim();
+                double dinero = Double.parseDouble(br.readLine().split(":")[1].trim());
+
+                if (esProveedor) {
+                    tienda.getUsuarios().add(new UsuProveedor(nombre, identificador, telefono, direccion, true));
+                } else {
+                    tienda.getUsuarios().add(new UsuComprador(nombre, identificador, telefono, direccion, false));
+                }
+
+                // Leer la línea en blanco entre usuarios
+                br.readLine();
+            }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+
+private void cargarProductosDesdeArchivo() {
+    String archivoProductos = "src/archivosPersistentes/productos.txt";
+    try (BufferedReader br = new BufferedReader(new FileReader(archivoProductos))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            String[] partes = linea.split(":");
+            if (partes.length > 1) {
+                String nombre = partes[1].trim();
+                String idProducto = br.readLine().split(":")[1].trim();
+                String idProveedor = br.readLine().split(":")[1].trim();
+                int cantidad = Integer.parseInt(br.readLine().split(":")[1].trim());
+                int precio = Integer.parseInt(br.readLine().split(":")[1].trim());
+
+                Producto producto = new Producto(nombre, idProducto, idProveedor, cantidad, precio);
+                tienda.getProductos().add(producto);
+
+                // Leer la línea en blanco entre productos
+                br.readLine();
+            }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+/*
+private void cargarComprasDesdeArchivo() {
+    String archivoCompras = "src/archivosPersistentes/compras.txt";
+    try (BufferedReader br = new BufferedReader(new FileReader(archivoCompras))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            String nombreProducto = linea.split(":")[1].trim();
+
+            // Leer la línea de "Proveedor" y obtener el proveedor
+            String proveedorLinea = br.readLine();
+            String proveedor = proveedorLinea.split(":")[1].trim();
+
+            // Leer la línea de "Cantidad" y obtener la cantidad
+            String cantidadLinea = br.readLine();
+            int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
+
+            // Leer la línea de "Total" y obtener el total
+            String totalLinea = br.readLine();
+            double totalCompra = Double.parseDouble(totalLinea.split(":")[1].trim());
+
+            // Leer la línea de "Comprador" y obtener el comprador
+            String compradorLinea = br.readLine();
+            String idComprador = compradorLinea.split(":")[1].trim();
+
+            // Crear la instancia de CompraUsu con los datos obtenidos
+            CompraUsu compra = new CompraUsu(nombreProducto, proveedor, cantidad, (int) totalCompra, idComprador);
+            
+            // Agregar la compra al ArrayList de compras en tienda
+            tienda.getCompras().add(compra);
+
+            // Leer la línea en blanco entre compras
+            br.readLine();
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+*/
+
+
+/*
+private void cargarVentasDesdeArchivo() {
+    String archivoVentas = "src/archivosPersistentes/ventas.txt";
+    try (BufferedReader br = new BufferedReader(new FileReader(archivoVentas))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            if (linea.startsWith("Producto:")) {
+                String nombreProducto = linea.split(":")[1].trim();
+                String nombreComprador = br.readLine().split(":")[1].trim();
+                String direccionComprador = br.readLine().split(":")[1].trim();
+                String numero = br.readLine().split(":")[1].trim();
+                String idVendedor = br.readLine().split(":")[1].trim();
+                int cantidad = Integer.parseInt(br.readLine().split(":")[1].trim());
+                double totalVenta = Double.parseDouble(br.readLine().split(":")[1].trim());
+
+                // Crear la venta y agregarla a la lista de ventas
+                VentaProv venta = new VentaProv(nombreProducto, nombreComprador, direccionComprador, numero, idVendedor, cantidad, (int) totalVenta);
+                tienda.getVentas().add(venta);
+
+                // Leer la línea en blanco entre ventas
+                br.readLine();
+            }
+        }
+    } catch (IOException | NumberFormatException e) {
+        e.printStackTrace();
+    }
+}
+*/
+
+    public void cargarDatosDesdeArchivo() {
+    cargarUsuariosDesdeArchivo();
+    cargarProductosDesdeArchivo();
+   // cargarComprasDesdeArchivo();
+   // cargarVentasDesdeArchivo();
+
+}
+    
+    
     
     
     

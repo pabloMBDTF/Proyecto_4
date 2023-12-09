@@ -1,6 +1,6 @@
-Nombre: qwewqe
-ID Producto: 23213
+Nombre: leche
+ID Producto: 123
 ID Proveedor: 1
 Cantidad: 3
-Precio: 15
+Precio: 4500
 

@@ -62,6 +62,7 @@ public class controladorComprador {
                         System.out.println(idComprador);
 
                         modelo.realizarCompra(idProducto, cantidadIngresada, idComprador);
+                        modelo.guardarProductoEnArchivo();
                         agregarRegistrosLista();
                     } else {
                         JOptionPane.showMessageDialog(null, "La cantidad ingresada es mayor que la cantidad disponible", "Advertencia", JOptionPane.WARNING_MESSAGE);

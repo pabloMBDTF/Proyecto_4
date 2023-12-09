@@ -59,6 +59,7 @@ public class controladorActualizarProducto {
             // Realizar la actualización del producto
             modelo.actualizarProductos(nombre, cantidad, precio);
             modelo.setProductoActual(null);
+            modelo.guardarProductoEnArchivo();
 
             // Crear y mostrar la nueva ventana
             PrincipalProvVista ventana = new PrincipalProvVista();

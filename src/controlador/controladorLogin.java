@@ -49,9 +49,10 @@ public class controladorLogin {
     class btnCargarDatosListener implements ActionListener{
 
         @Override
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("hola");
-        }
+ public void actionPerformed(ActionEvent e) {
+        modelo.cargarDatosDesdeArchivo();
+        JOptionPane.showMessageDialog(null, "Datos cargados correctamente.", "Información", JOptionPane.INFORMATION_MESSAGE);
+    }
     
     
     }
