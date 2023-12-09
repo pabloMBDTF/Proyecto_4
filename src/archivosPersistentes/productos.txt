@@ -1,6 +1,12 @@
 Nombre: leche
 ID Producto: 123
 ID Proveedor: 1
-Cantidad: 3
+Cantidad: 0
 Precio: 4500
+
+Nombre: qqq
+ID Producto: 2
+ID Proveedor: 1
+Cantidad: 0
+Precio: 0
 

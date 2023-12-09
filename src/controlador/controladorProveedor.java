@@ -187,8 +187,12 @@ public class controladorProveedor {
     void agregarRegistrosLista(){
         vista.getModeloTabla().setRowCount(0);
         for(Producto producto : modelo.getTienda().getProductos()){
-            if(producto != null && producto.getIdProveedor() == modelo.getUsuario().getIdentificador()){
-                
+            System.out.println("entra");
+            System.out.println(producto.getIdProveedor());
+            System.out.println(modelo.getUsuario().getIdentificador());
+            if(producto != null && producto.getIdProveedor().equalsIgnoreCase(modelo.getUsuario().getIdentificador())){
+                System.out.println(producto.getIdProveedor());
+                System.out.println(modelo.getUsuario().getIdentificador());
                 agregarFilaTabla(producto);
             }
         }

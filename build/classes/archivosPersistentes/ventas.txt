@@ -3,6 +3,6 @@ Comprador: q
 Dirección: cra
 Teléfono: 675467
 Proveedor: 1
-Cantidad: 1
-Total: 4500
+Cantidad: 3
+Total: 13500
 
