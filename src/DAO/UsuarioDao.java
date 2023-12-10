@@ -374,8 +374,6 @@ private void cargarComprasDesdeArchivo() {
 }
 */
 
-
-/*
 private void cargarVentasDesdeArchivo() {
     String archivoVentas = "src/archivosPersistentes/ventas.txt";
     try (BufferedReader br = new BufferedReader(new FileReader(archivoVentas))) {
@@ -383,32 +381,48 @@ private void cargarVentasDesdeArchivo() {
         while ((linea = br.readLine()) != null) {
             if (linea.startsWith("Producto:")) {
                 String nombreProducto = linea.split(":")[1].trim();
-                String nombreComprador = br.readLine().split(":")[1].trim();
-                String direccionComprador = br.readLine().split(":")[1].trim();
-                String numero = br.readLine().split(":")[1].trim();
-                String idVendedor = br.readLine().split(":")[1].trim();
-                int cantidad = Integer.parseInt(br.readLine().split(":")[1].trim());
-                double totalVenta = Double.parseDouble(br.readLine().split(":")[1].trim());
 
-                // Crear la venta y agregarla a la lista de ventas
-                VentaProv venta = new VentaProv(nombreProducto, nombreComprador, direccionComprador, numero, idVendedor, cantidad, (int) totalVenta);
-                tienda.getVentas().add(venta);
+                // Leer la línea de "Comprador" y obtener el comprador
+                String compradorLinea = br.readLine();
+                String idComprador = compradorLinea.split(":")[1].trim();
+
+                // Leer la línea de "Dirección" y obtener la dirección
+                String direccionLinea = br.readLine();
+                String direccion = direccionLinea.split(":")[1].trim();
+
+                // Leer la línea de "Teléfono" y obtener el teléfono
+                String telefonoLinea = br.readLine();
+                String numero = telefonoLinea.split(":")[1].trim();
+
+                // Leer la línea de "Proveedor" y obtener el proveedor
+                String proveedorLinea = br.readLine();
+                String idVendedor = proveedorLinea.split(":")[1].trim();
+
+                // Leer la línea de "Cantidad" y obtener la cantidad
+                String cantidadLinea = br.readLine();
+                int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
+
+                // Leer la línea de "Total" y obtener el total
+                String totalLinea = br.readLine();
+                double totalVenta = Double.parseDouble(totalLinea.split(":")[1].trim());
 
                 // Leer la línea en blanco entre ventas
                 br.readLine();
+
+                VentaProv venta = new VentaProv(nombreProducto, idComprador, direccion, numero, idVendedor, cantidad, (int) totalVenta);
+                tienda.getVentas().add(venta);
             }
         }
-    } catch (IOException | NumberFormatException e) {
+    } catch (IOException e) {
         e.printStackTrace();
     }
 }
-*/
 
     public void cargarDatosDesdeArchivo() {
     cargarUsuariosDesdeArchivo();
     cargarProductosDesdeArchivo();
    // cargarComprasDesdeArchivo();
-   // cargarVentasDesdeArchivo();
+    cargarVentasDesdeArchivo();
 
     }
     

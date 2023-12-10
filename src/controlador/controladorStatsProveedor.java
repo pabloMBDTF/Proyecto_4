@@ -113,11 +113,12 @@ public class controladorStatsProveedor {
     }
     
     
-    public void cargarVentass(){
-        for(VentaProv venta : modelo.getTienda().getVentas()){
-            if (venta.getIdVendedor() == modelo.getUsuario().getIdentificador()) {
-                ventass.add(venta);
-            }
+ public void cargarVentass() {
+    ventass.clear(); // Limpiar la lista antes de cargar nuevas ventas
+    for (VentaProv venta : modelo.getTienda().getVentas()) {
+        if (modelo.getUsuario().getIdentificador().equals(venta.getIdVendedor())) {
+            ventass.add(venta);
         }
     }
+}
 }

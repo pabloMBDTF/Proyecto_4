@@ -1,6 +1,6 @@
-Producto: leche
+Producto: Leche
 Proveedor: p
-Cantidad: 3
-Total: 13500
+Cantidad: 2
+Total: 9000
 Comprador: 2
 

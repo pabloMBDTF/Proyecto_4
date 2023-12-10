@@ -1,8 +1,8 @@
-Producto: leche
+Producto: Leche
 Comprador: q
 Dirección: cra
 Teléfono: 675467
 Proveedor: 1
-Cantidad: 3
-Total: 13500
+Cantidad: 2
+Total: 9000
 

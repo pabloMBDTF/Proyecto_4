@@ -3,12 +3,12 @@ Nombre: p
 Identificador: 1
 Teléfono: 3125620
 Dirección: calle
-Dinero: 13500
+Dinero: 9000
 
 Proveedor: false
 Nombre: q
 Identificador: 2
 Teléfono: 675467
 Dirección: cra
-Dinero: 13500
+Dinero: 9000
 
