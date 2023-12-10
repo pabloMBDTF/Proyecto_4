@@ -292,13 +292,19 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                     String identificador = br.readLine().split(":")[1].trim();
                     String telefono = br.readLine().split(":")[1].trim();
                     String direccion = br.readLine().split(":")[1].trim();
-                    double dinero = Double.parseDouble(br.readLine().split(":")[1].trim());
+                    int dinero = Integer.parseInt(br.readLine().split(":")[1].trim());
 
                     if (esProveedor) {
-                        tienda.getUsuarios().add(new UsuProveedor(nombre, identificador, telefono, direccion, true));
+                        UsuProveedor prov = new UsuProveedor(nombre, identificador, telefono, direccion, true);
+                        prov.setDinero(dinero);
+                        tienda.getUsuarios().add(prov);
                     } else {
-                        tienda.getUsuarios().add(new UsuComprador(nombre, identificador, telefono, direccion, false));
+                        UsuComprador usuComp = new UsuComprador(nombre, identificador, telefono, direccion, false);
+                        usuComp.setDinero(dinero);
+                        tienda.getUsuarios().add(usuComp);
+                    
                     }
+                    
 
                     // Leer la línea en blanco entre usuarios
                     br.readLine();
@@ -335,7 +341,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         }
     }
 
-/*
+
 private void cargarComprasDesdeArchivo() {
     String archivoCompras = "src/archivosPersistentes/compras.txt";
     try (BufferedReader br = new BufferedReader(new FileReader(archivoCompras))) {
@@ -372,7 +378,7 @@ private void cargarComprasDesdeArchivo() {
         e.printStackTrace();
     }
 }
-*/
+
 
 private void cargarVentasDesdeArchivo() {
     String archivoVentas = "src/archivosPersistentes/ventas.txt";
@@ -402,9 +408,9 @@ private void cargarVentasDesdeArchivo() {
                 String cantidadLinea = br.readLine();
                 int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
 
-                // Leer la línea de "Total" y obtener el total
-                String totalLinea = br.readLine();
-                double totalVenta = Double.parseDouble(totalLinea.split(":")[1].trim());
+                // Leer la línea de "Total" y obtener el totalVenta
+                String totalVentaLinea = br.readLine();
+                double totalVenta = Double.parseDouble(totalVentaLinea.split(":")[1].trim());
 
                 // Leer la línea en blanco entre ventas
                 br.readLine();
@@ -421,7 +427,7 @@ private void cargarVentasDesdeArchivo() {
     public void cargarDatosDesdeArchivo() {
     cargarUsuariosDesdeArchivo();
     cargarProductosDesdeArchivo();
-   // cargarComprasDesdeArchivo();
+    cargarComprasDesdeArchivo();
     cargarVentasDesdeArchivo();
 
     }

@@ -120,5 +120,5 @@ public class controladorStatsProveedor {
             ventass.add(venta);
         }
     }
-}
+}   
 }

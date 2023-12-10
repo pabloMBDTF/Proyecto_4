@@ -2,13 +2,13 @@ Proveedor: true
 Nombre: p
 Identificador: 1
 Teléfono: 3125620
-Dirección: calle
-Dinero: 9000
+Dirección: cra
+Dinero: 14000
 
 Proveedor: false
 Nombre: q
 Identificador: 2
-Teléfono: 675467
-Dirección: cra
-Dinero: 9000
+Teléfono: 575674
+Dirección: calle
+Dinero: 14000
 

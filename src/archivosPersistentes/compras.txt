@@ -1,6 +1,12 @@
-Producto: Leche
+Producto: leche
 Proveedor: p
 Cantidad: 2
 Total: 9000
+Comprador: 2
+
+Producto: atun
+Proveedor: p
+Cantidad: 1
+Total: 5000
 Comprador: 2
 

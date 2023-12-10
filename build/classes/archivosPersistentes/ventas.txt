@@ -1,8 +1,16 @@
-Producto: Leche
+Producto: leche
 Comprador: q
-Dirección: cra
-Teléfono: 675467
+Dirección: calle
+Teléfono: 575674
 Proveedor: 1
 Cantidad: 2
 Total: 9000
+
+Producto: atun
+Comprador: q
+Dirección: calle
+Teléfono: 575674
+Proveedor: 1
+Cantidad: 1
+Total: 5000
 

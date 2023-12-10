@@ -109,13 +109,14 @@ public class controladorStatsComprador {
         
     }
     
-    public void cargarCompras(){
-        for(CompraUsu compra : modelo.getTienda().getCompras()){
-            if (compra.getIdComprador()== modelo.getUsuario().getIdentificador()) {
-                comprass.add(compra);
-            }
+  public void cargarCompras() {
+    comprass.clear(); // Limpiar la lista antes de cargar nuevas compras
+    for (CompraUsu compra : modelo.getTienda().getCompras()) {
+        if (modelo.getUsuario().getIdentificador().equals(compra.getIdComprador())) {
+            comprass.add(compra);
         }
     }
+}
     
     
 }
