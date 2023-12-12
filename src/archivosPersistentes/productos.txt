@@ -1,12 +1,6 @@
-Nombre: leche
-ID Producto: 123
+Nombre: coca
+ID Producto: 1234
 ID Proveedor: 1
-Cantidad: 2
-Precio: 4500
-
-Nombre: atun
-ID Producto: 2
-ID Proveedor: 1
-Cantidad: 1
-Precio: 5000
+Cantidad: 0
+Precio: 10000
 

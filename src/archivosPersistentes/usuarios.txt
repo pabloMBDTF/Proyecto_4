@@ -1,14 +1,14 @@
 Proveedor: true
-Nombre: p
+Nombre: pablo
 Identificador: 1
-Teléfono: 3125620
-Dirección: cra
-Dinero: 14000
+Teléfono: 332244
+Dirección: aca
+Dinero: 40000
 
 Proveedor: false
-Nombre: q
-Identificador: 2
-Teléfono: 575674
-Dirección: calle
-Dinero: 14000
+Nombre: danielito
+Identificador: 22
+Teléfono: 32432424
+Dirección: mojica
+Dinero: 40000
 

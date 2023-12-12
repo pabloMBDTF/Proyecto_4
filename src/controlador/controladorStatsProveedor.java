@@ -114,7 +114,7 @@ public class controladorStatsProveedor {
     
     
  public void cargarVentass() {
-    ventass.clear(); // Limpiar la lista antes de cargar nuevas ventas
+    ventass.clear(); 
     for (VentaProv venta : modelo.getTienda().getVentas()) {
         if (modelo.getUsuario().getIdentificador().equals(venta.getIdVendedor())) {
             ventass.add(venta);

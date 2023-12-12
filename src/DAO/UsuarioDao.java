@@ -28,6 +28,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     private Supermercado tienda = new Supermercado(); 
     private Usuario usuarioActual;
     private Producto productoActual;
+    private boolean datosCargados = false;
     
 
     @Override
@@ -167,7 +168,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void guardarUsuarioEnArchivo() {
         String archivo = "src/archivosPersistentes/usuarios.txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
-            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+            
 
             for (Usuario usuario : tienda.getUsuarios()) {
                 bw.write("Proveedor: " + usuario.isEsProveedor());
@@ -182,7 +183,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.newLine();
                 bw.write("Dinero: " + usuario.getDinero());
                 bw.newLine();
-                bw.newLine(); // Agregar una línea en blanco entre usuarios
+                bw.newLine(); 
             }
             bw.flush();
         } catch (IOException e) {
@@ -194,7 +195,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void guardarProductoEnArchivo() {
         String archivo = "src/archivosPersistentes/productos.txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
-            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+            
 
             for (Producto producto : tienda.getProductos()) {
                 bw.write("Nombre: " + producto.getNombre());
@@ -207,7 +208,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.newLine();
                 bw.write("Precio: " + producto.getPrecio());
                 bw.newLine();
-                bw.newLine(); // Agregar una línea en blanco entre productos
+                bw.newLine(); 
             }
             bw.flush();
         } catch (IOException e) {
@@ -219,7 +220,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void guardarCompraEnArchivo() {
         String archivo = "src/archivosPersistentes/compras.txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
-            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+            
 
             for (CompraUsu compra : tienda.getCompras()) {
                 bw.write("Producto: " + compra.getNombreProducto());
@@ -232,7 +233,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.newLine();
                 bw.write("Comprador: " + compra.getIdComprador());
                 bw.newLine();
-                bw.newLine(); // Agregar una línea en blanco entre compras
+                bw.newLine(); 
             }
             bw.flush();
         } catch (IOException e) {
@@ -244,7 +245,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     public void guardarVentaEnArchivo() {
         String archivo = "src/archivosPersistentes/ventas.txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, false))) {
-            // El segundo parámetro 'false' indica que el archivo no debe ser apendizado, sino sobrescrito.
+            
 
             for (VentaProv venta : tienda.getVentas()) {
                 bw.write("Producto: " + venta.getNombreProducto());
@@ -261,7 +262,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                 bw.newLine();
                 bw.write("Total: " + venta.getTotalVenta());
                 bw.newLine();
-                bw.newLine(); // Agregar una línea en blanco entre ventas
+                bw.newLine(); 
             }
             bw.flush();
         } catch (IOException e) {
@@ -276,7 +277,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         for (Producto producto : productos) {
             if (producto.getIdProducto().equals(idProducto)) {
                 productos.remove(producto);
-                break;  // Importante: salir del bucle después de eliminar para evitar ConcurrentModificationException
+                break;  
             }
         }
     }
@@ -306,7 +307,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                     }
                     
 
-                    // Leer la línea en blanco entre usuarios
+                    
                     br.readLine();
                 }
             }
@@ -321,9 +322,9 @@ public class UsuarioDao implements InterfaceUsuarioDao{
         try (BufferedReader br = new BufferedReader(new FileReader(archivoProductos))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                // Verificar si la línea es el comienzo de un nuevo producto
+                
                 if (linea.startsWith("Nombre:")) {
-                    // Crear un nuevo producto con la información de las siguientes líneas
+                    
                     String nombre = linea.split(":")[1].trim();
                     String idProducto = br.readLine().split(":")[1].trim();
                     String idProveedor = br.readLine().split(":")[1].trim();
@@ -331,7 +332,7 @@ public class UsuarioDao implements InterfaceUsuarioDao{
                     int cantidad = Integer.parseInt(br.readLine().split(":")[1].trim());
                     int precio = Integer.parseInt(br.readLine().split(":")[1].trim());
 
-                    // Crear instancia de Producto y añadir al ArrayList
+                    
                     Producto nuevoProducto = new Producto(nombre, idProducto, idProveedor, cantidad, precio);
                     tienda.getProductos().add(nuevoProducto);
                 }
@@ -342,42 +343,41 @@ public class UsuarioDao implements InterfaceUsuarioDao{
     }
 
 
-private void cargarComprasDesdeArchivo() {
-    String archivoCompras = "src/archivosPersistentes/compras.txt";
-    try (BufferedReader br = new BufferedReader(new FileReader(archivoCompras))) {
-        String linea;
-        while ((linea = br.readLine()) != null) {
-            String nombreProducto = linea.split(":")[1].trim();
+    private void cargarComprasDesdeArchivo() {
+        String archivoCompras = "src/archivosPersistentes/compras.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoCompras))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String nombreProducto = linea.split(":")[1].trim();
 
-            // Leer la línea de "Proveedor" y obtener el proveedor
-            String proveedorLinea = br.readLine();
-            String proveedor = proveedorLinea.split(":")[1].trim();
+                            String proveedorLinea = br.readLine();
+                String proveedor = proveedorLinea.split(":")[1].trim();
 
-            // Leer la línea de "Cantidad" y obtener la cantidad
-            String cantidadLinea = br.readLine();
-            int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
 
-            // Leer la línea de "Total" y obtener el total
-            String totalLinea = br.readLine();
-            double totalCompra = Double.parseDouble(totalLinea.split(":")[1].trim());
+                String cantidadLinea = br.readLine();
+                int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
 
-            // Leer la línea de "Comprador" y obtener el comprador
-            String compradorLinea = br.readLine();
-            String idComprador = compradorLinea.split(":")[1].trim();
 
-            // Crear la instancia de CompraUsu con los datos obtenidos
-            CompraUsu compra = new CompraUsu(nombreProducto, proveedor, cantidad, (int) totalCompra, idComprador);
-            
-            // Agregar la compra al ArrayList de compras en tienda
-            tienda.getCompras().add(compra);
+                String totalLinea = br.readLine();
+                double totalCompra = Double.parseDouble(totalLinea.split(":")[1].trim());
 
-            // Leer la línea en blanco entre compras
-            br.readLine();
+
+                String compradorLinea = br.readLine();
+                String idComprador = compradorLinea.split(":")[1].trim();
+
+
+                CompraUsu compra = new CompraUsu(nombreProducto, proveedor, cantidad, (int) totalCompra, idComprador);
+
+
+                tienda.getCompras().add(compra);
+
+
+                br.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    } catch (IOException e) {
-        e.printStackTrace();
     }
-}
 
 
 private void cargarVentasDesdeArchivo() {
@@ -388,31 +388,31 @@ private void cargarVentasDesdeArchivo() {
             if (linea.startsWith("Producto:")) {
                 String nombreProducto = linea.split(":")[1].trim();
 
-                // Leer la línea de "Comprador" y obtener el comprador
+                
                 String compradorLinea = br.readLine();
                 String idComprador = compradorLinea.split(":")[1].trim();
 
-                // Leer la línea de "Dirección" y obtener la dirección
+                
                 String direccionLinea = br.readLine();
                 String direccion = direccionLinea.split(":")[1].trim();
 
-                // Leer la línea de "Teléfono" y obtener el teléfono
+                
                 String telefonoLinea = br.readLine();
                 String numero = telefonoLinea.split(":")[1].trim();
 
-                // Leer la línea de "Proveedor" y obtener el proveedor
+                
                 String proveedorLinea = br.readLine();
                 String idVendedor = proveedorLinea.split(":")[1].trim();
 
-                // Leer la línea de "Cantidad" y obtener la cantidad
+                
                 String cantidadLinea = br.readLine();
                 int cantidad = Integer.parseInt(cantidadLinea.split(":")[1].trim());
 
-                // Leer la línea de "Total" y obtener el totalVenta
+                
                 String totalVentaLinea = br.readLine();
                 double totalVenta = Double.parseDouble(totalVentaLinea.split(":")[1].trim());
 
-                // Leer la línea en blanco entre ventas
+                
                 br.readLine();
 
                 VentaProv venta = new VentaProv(nombreProducto, idComprador, direccion, numero, idVendedor, cantidad, (int) totalVenta);
@@ -425,10 +425,14 @@ private void cargarVentasDesdeArchivo() {
 }
 
     public void cargarDatosDesdeArchivo() {
-    cargarUsuariosDesdeArchivo();
-    cargarProductosDesdeArchivo();
-    cargarComprasDesdeArchivo();
-    cargarVentasDesdeArchivo();
+        if (!datosCargados) {
+            cargarUsuariosDesdeArchivo();
+            cargarProductosDesdeArchivo();
+            cargarComprasDesdeArchivo();
+            cargarVentasDesdeArchivo();
+            datosCargados = true;
+        }
+        
 
     }
     

@@ -23,9 +23,7 @@ abstract public class Usuario {
     public Usuario(String nombre, String identificador, String Telefono, String Direccion, boolean esProveedor) {
         this.nombre = nombre;
         this.dinero = 0;
-        this.identificador = identificador;
-        //this.productos = new ArrayList<String>();
-        //this.cantidades = new ArrayList<Integer>();
+        this.identificador = identificador; 
         this.esProveedor = esProveedor;
         this.Telefono = Telefono;
         this.Direccion = Direccion;
@@ -46,22 +44,6 @@ abstract public class Usuario {
     public void setIdentificador(String identificador) {
         this.identificador = identificador;
     }
-
-    /*public ArrayList<String> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(ArrayList<String> productos) {
-        this.productos = productos;
-    }
-
-    public ArrayList<Integer> getCantidades() {
-        return cantidades;
-    }
-
-    public void setCantidades(ArrayList<Integer> cantidades) {
-        this.cantidades = cantidades;
-    }*/
 
     public boolean isEsProveedor() {
         return esProveedor;
@@ -101,13 +83,7 @@ abstract public class Usuario {
     
     
     
-    //abstract public ArrayList<String> getProductosProveedor();
-    //abstract public ArrayList<String> getNomProductosProveedor();
-    //abstract public ArrayList<Integer> getCantidadProductosProveedor();
-    //abstract public int getGananciasProveedor();
-    //abstract public ArrayList<String> getNombreProductosComprador();
-    //abstract public ArrayList<Integer> getCantidadProductosComprador();
-    //abstract public int getTotalComprador();
+    
     
 
     

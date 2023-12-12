@@ -43,23 +43,45 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
 
+        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel2.setText("Direccion");
 
+        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
         jLabel3.setText("telefono");
 
+        nombreJField.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         nombreJField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreJFieldActionPerformed(evt);
             }
         });
 
-        btnActualizar.setText("Actualizar");
+        telefonoJField.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
 
+        direccionJField.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+
+        btnActualizar.setBackground(new java.awt.Color(0, 0, 0));
+        btnActualizar.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setText("Actualizar");
+        btnActualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnVolver.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnVolver.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver.setText("salir");
 
+        btnEliminarCuenta.setBackground(new java.awt.Color(0, 0, 0));
+        btnEliminarCuenta.setFont(new java.awt.Font("Dubai Light", 0, 14)); // NOI18N
+        btnEliminarCuenta.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarCuenta.setText("Eliminar Cuenta");
+        btnEliminarCuenta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnEliminarCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarCuentaActionPerformed(evt);
@@ -99,10 +121,10 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(btnVolver)
-                .addGap(28, 28, 28)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(nombreJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -111,7 +133,7 @@ public class ActualizarUsuarioVista extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(telefonoJField, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))

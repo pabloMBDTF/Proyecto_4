@@ -1,16 +1,16 @@
-Producto: leche
-Comprador: q
-Dirección: calle
-Teléfono: 575674
+Producto: coca
+Comprador: danielito
+Dirección: mojica
+Teléfono: 32432424
 Proveedor: 1
-Cantidad: 2
-Total: 9000
+Cantidad: 3
+Total: 30000
 
-Producto: atun
-Comprador: q
-Dirección: calle
-Teléfono: 575674
+Producto: coca
+Comprador: danielito
+Dirección: mojica
+Teléfono: 32432424
 Proveedor: 1
 Cantidad: 1
-Total: 5000
+Total: 10000
 

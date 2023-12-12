@@ -45,14 +45,14 @@ public class controladorActualizarProducto {
         String cantidadStr = vista.getCantidadJField().getText();
         String precioStr = vista.getPrecioJField().getText();
 
-        // Verificar que todos los campos estén llenos
+        
         if (nombre.isEmpty() || cantidadStr.isEmpty() || precioStr.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
             return;
         }
 
         try {
-            // Verificar que cantidad y precio sean números válidos
+            
             int cantidad = Integer.parseInt(cantidadStr);
             int precio = Integer.parseInt(precioStr);
 

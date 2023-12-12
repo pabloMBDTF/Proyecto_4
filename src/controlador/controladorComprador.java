@@ -47,14 +47,14 @@ public class controladorComprador {
                 int cantidadDisponible = Integer.parseInt(vista.getModelo().getValueAt(filaSeleccionada, 3).toString());
                 String idComprador = (String) vista.getModelo().getValueAt(filaSeleccionada, 1);
 
-                // Obtener la cantidad ingresada desde la vista
+                
                 String cantidadIngresadaTexto = vista.getCantidadJField().getText();
 
-                // Verificar si la cantidad ingresada es un número
+                
                 if (esNumero(cantidadIngresadaTexto)) {
                     int cantidadIngresada = Integer.parseInt(cantidadIngresadaTexto);
 
-                    // Verificar si la cantidad ingresada es igual o menor que la cantidad disponible
+                    
                     if (cantidadIngresada <= cantidadDisponible) {
                         // Realizar la compra
                         System.out.println(idProducto);
@@ -71,7 +71,7 @@ public class controladorComprador {
                     JOptionPane.showMessageDialog(null, "La cantidad ingresada no es un número válido", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 }
             } else {
-                // No hay fila seleccionada
+                
                 JOptionPane.showMessageDialog(null, "No hay fila seleccionada", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
         }
@@ -82,18 +82,18 @@ public class controladorComprador {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Verificar si hay compras asociadas al usuario actual
+            
         String idUsuarioActual = modelo.getUsuario().getIdentificador();
         boolean tieneCompras = tieneComprasAsociadas(idUsuarioActual);
 
             if (tieneCompras) {
-                // Si hay compras, abrir la ventana de estadísticas
+                
                 CompradorEstadisticasVista ventana = new CompradorEstadisticasVista();
                 ventana.setVisible(true);
                 vista.dispose();
                 controladorStatsComprador cont = new controladorStatsComprador(modelo, ventana);
             } else {
-                // Mostrar ventana de advertencia
+                
                 JOptionPane.showMessageDialog(null, "No hay compras asociadas al usuario actual", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
         }
@@ -161,10 +161,10 @@ public class controladorComprador {
     private boolean tieneComprasAsociadas(String idUsuario) {
         for (CompraUsu compra : modelo.getTienda().getCompras()) {
             if (compra.getIdComprador().equals(idUsuario)) {
-                return true; // Hay compras asociadas al usuario
+                return true; 
             }
         }
-        return false; // No hay compras asociadas al usuario
+        return false; 
     }
 
     public PrincipalUsuVista getVista() {

@@ -110,7 +110,7 @@ public class controladorStatsComprador {
     }
     
   public void cargarCompras() {
-    comprass.clear(); // Limpiar la lista antes de cargar nuevas compras
+    comprass.clear(); 
     for (CompraUsu compra : modelo.getTienda().getCompras()) {
         if (modelo.getUsuario().getIdentificador().equals(compra.getIdComprador())) {
             comprass.add(compra);

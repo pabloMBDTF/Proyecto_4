@@ -41,6 +41,7 @@ public class controladorActualizarUsuario {
 
             if (opcion == JOptionPane.YES_OPTION) {
                 modelo.eliminarUsuario();
+                modelo.guardarProductoEnArchivo();
                 modelo.guardarUsuarioEnArchivo();
                 LoginVista ventana = new LoginVista();
                 ventana.setVisible(true);
@@ -59,25 +60,25 @@ public class controladorActualizarUsuario {
             String direccion = vista.getDireccionJField().getText();
             String telefono = vista.getTelefonoJField().getText();
 
-            // Verificar que todos los campos estén llenos
+            
             if (nombre.isEmpty() || direccion.isEmpty() || telefono.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                 return;
             }
 
-            // Verificar que el campo de teléfono sea un número
+            
             try {
-                Long.parseLong(telefono); // Intentar convertir a número
+                Long.parseLong(telefono); 
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(null, "El teléfono debe ser un número válido.");
                 return;
             }
 
-            // Realizar la actualización de la persona
+            
             modelo.actualizarPersona(nombre, direccion, telefono);
             modelo.guardarUsuarioEnArchivo();
 
-            // Crear y mostrar la nueva ventana y controlador según el tipo de usuario
+            
             if (modelo.getUsuario().isEsProveedor()) {
                 PrincipalProvVista ventana = new PrincipalProvVista();
                 ventana.setVisible(true);

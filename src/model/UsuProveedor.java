@@ -10,56 +10,10 @@ import java.util.ArrayList;
  *
  * @author pablo
  */
-public class UsuProveedor extends Usuario {
-    
-    //private ArrayList<String> nombreProductos;
-    //private ArrayList<String> nombreComprador;
-    //private ArrayList<Integer> cantidad;
+public class UsuProveedor extends Usuario {   
     private int totalComprado;
-
     public UsuProveedor(String nombre, String identificador, String telefono, String direccion, boolean esProveedor) {
-        super(nombre, identificador, telefono, direccion, esProveedor);
-        //this.nombreProductos = new ArrayList<String>();
-        //this.nombreComprador = new ArrayList<String>();
-        //this.cantidad = new ArrayList<Integer>();
-        //this.totalComprado = 0;
+        super(nombre, identificador, telefono, direccion, esProveedor);      
     }
-
-    /*@Override
-    public ArrayList<String> getProductosProveedor() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<String> getNomProductosProveedor() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Integer> getCantidadProductosProveedor() {
-        return null;
-    }
-
-    @Override
-    public int getGananciasProveedor() {
-        return totalComprado;
-    }
-
-    @Override
-    public ArrayList<String> getNombreProductosComprador() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Integer> getCantidadProductosComprador() {
-        return null;
-    }
-
-    @Override
-    public int getTotalComprador() {
-        return 0;
-    }*/
-    
-    
-    
+   
 }
