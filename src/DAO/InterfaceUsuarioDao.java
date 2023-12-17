@@ -12,6 +12,15 @@ import model.VentaProv;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 
+
+/*
+Pablo Becerrra G. - 2243506 - pablo.becerra@correounivalle.edu.co
+Tiffany Torres F. - 2241747 - tiffany.torre@correounivalle.edu.do
+David Rengifo J. - 2241016 - julian.david.rengifo@correounivalle.edu.co
+
+Fundamentos de programacion orientada a eventos
+
+*/
 /**
  *
  * @author pablo

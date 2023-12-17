@@ -1,16 +1,16 @@
-Producto: coca
-Comprador: danielito
-Dirección: mojica
-Teléfono: 32432424
+Producto: pan
+Comprador: fernando
+Dirección: calle 18
+Teléfono: 213213
 Proveedor: 1
-Cantidad: 3
-Total: 30000
+Cantidad: 4
+Total: 8000
 
-Producto: coca
-Comprador: danielito
-Dirección: mojica
-Teléfono: 32432424
+Producto: pan
+Comprador: fernando
+Dirección: calle 18
+Teléfono: 213213
 Proveedor: 1
-Cantidad: 1
-Total: 10000
+Cantidad: 2
+Total: 4000
 

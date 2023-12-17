@@ -16,6 +16,15 @@ import vista.LoginVista;
  *
  * @author pablo
  */
+
+/*
+Pablo Becerrra G. - 2243506 - pablo.becerra@correounivalle.edu.co
+Tiffany Torres F. - 2241747 - tiffany.torre@correounivalle.edu.do
+David Rengifo J. - 2241016 - julian.david.rengifo@correounivalle.edu.co
+
+Fundamentos de programacion orientada a eventos
+
+*/
 public class controladorCrearUsuario {
     private UsuarioDao modelo;
     private CrearUsuVista vista;

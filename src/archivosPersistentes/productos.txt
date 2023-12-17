@@ -1,6 +1,6 @@
-Nombre: coca
-ID Producto: 1234
+Nombre: pan
+ID Producto: 123
 ID Proveedor: 1
-Cantidad: 0
-Precio: 10000
+Cantidad: 4
+Precio: 1500
 

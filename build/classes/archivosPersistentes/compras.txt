@@ -1,12 +1,12 @@
-Producto: coca
+Producto: pan
 Proveedor: pablo
-Cantidad: 3
-Total: 30000
-Comprador: 22
+Cantidad: 4
+Total: 8000
+Comprador: 2
 
-Producto: coca
+Producto: pan
 Proveedor: pablo
-Cantidad: 1
-Total: 10000
-Comprador: 22
+Cantidad: 2
+Total: 4000
+Comprador: 2
 
